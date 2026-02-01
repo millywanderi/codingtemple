@@ -8,3 +8,5 @@
 
 * Differences between git and github; how to use them.
 * Git commands such as cloning, adding, committing, and pushing.
+* Generating and setting https and ssh keys.
+
