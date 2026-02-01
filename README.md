@@ -7,3 +7,4 @@
 ***The following is what we achieved at the end of this lesson***
 
 * Differences between git and github; how to use them.
+* Git commands such as cloning, adding, committing, and pushing.
