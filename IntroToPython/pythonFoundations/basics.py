@@ -9,4 +9,10 @@ print(f"{name}, {age}, {color}")
 
 # Control Structures
 score = int(input("Enter your exam score: "))
-print(f"Your exam score is: {score}")
+if score > 90:
+    print("Excellent")
+elif score > 70 and score <= 90:
+    print("Good")
+else:
+    print("Needs Improvement")
+# print(f"Your exam score is: {score}")
