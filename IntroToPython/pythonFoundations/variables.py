@@ -61,3 +61,13 @@ def myfunc():
     print("My name is " + x)
 myfunc()
 print("My name is " + x)
+
+# Use of global keyword to create a variable inside a function
+x = "blue"
+
+def myfunc():
+    global x
+    x = "beige"
+
+myfunc()
+print("My favorite color is " + x)
