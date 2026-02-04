@@ -14,6 +14,11 @@ print(e); print(f); print(g)
 o = p = q = "Purple"
 print(o); print(p); print(q)
 
+# Unpack a collection
+colors = ["beige", "blue", "white", "yellow"]
+w, x, y, z = colors
+print(w); print(x); print(y); print(z)
+
 # Casting variables
 a = str("Hello, World!")
 b = int(12)
