@@ -52,3 +52,12 @@ print(type(i)); print(type(j))
 c = 3
 C = "mum"
 print(c); print(C) # C will not overwrite c
+
+# Global variables. They are written outside the function
+x = "Millicent"
+
+def myfunc():
+    x = "Wanderi"
+    print("My name is " + x)
+myfunc()
+print("My name is " + x)
