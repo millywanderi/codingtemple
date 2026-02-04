@@ -28,3 +28,8 @@ print(3); print(3 * 3); print(6 / 3)
 
 # Print mix text and number
 print("My favorite number is", 3)
+
+# Reassigning value
+m = 3
+m = "me"
+print(m) # it prints me because python already reassigned 3 to value me
