@@ -3,9 +3,12 @@
 # x and y are variables and the number and string attached to it are values
 x = 31
 y = "Millicent"
-
 print(x)
 print(y)
+
+# many values to multiple variables
+e, f, g = "Monday", "Tuesday", "Wednesday"
+print(e); print(f); print(g)
 
 # Casting variables
 a = str("Hello, World!")
@@ -15,9 +18,6 @@ c = float(3)
 print(a)
 print(b)
 print(c)
-
-# You can write different statements in one line by separating them with ;
-print("I"); print("Love"); print("You")
 
 # Print without a new line
 print("I will visit in the evening.", end= " ")
