@@ -8,10 +8,13 @@ print(x)
 print(y)
 
 # Casting variables
-a = str(10)
+a = str("Hello, World!")
 b = int(12)
 c = float(3)
 
 print(a)
 print(b)
 print(c)
+
+# You can write different statements in one line by separating them with ;
+print("I"); print("Love"); print("You")
