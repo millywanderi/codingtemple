@@ -10,6 +10,10 @@ print(y)
 e, f, g = "Monday", "Tuesday", "Wednesday"
 print(e); print(f); print(g)
 
+# One value to multiple variables
+o = p = q = "Purple"
+print(o); print(p); print(q)
+
 # Casting variables
 a = str("Hello, World!")
 b = int(12)
