@@ -25,3 +25,6 @@ print("Please prepare some pilau.")
 
 # Print numbers
 print(3); print(3 * 3); print(6 / 3)
+
+# Print mix text and number
+print("My favorite number is", 3)
