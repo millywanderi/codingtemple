@@ -22,3 +22,6 @@ print("I"); print("Love"); print("You")
 # Print without a new line
 print("I will visit in the evening.", end= " ")
 print("Please prepare some pilau.")
+
+# Print numbers
+print(3); print(3 * 3); print(6 / 3)
