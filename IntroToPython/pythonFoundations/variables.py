@@ -18,3 +18,7 @@ print(c)
 
 # You can write different statements in one line by separating them with ;
 print("I"); print("Love"); print("You")
+
+# Print without a new line
+print("I will visit in the evening.", end= " ")
+print("Please prepare some pilau.")
