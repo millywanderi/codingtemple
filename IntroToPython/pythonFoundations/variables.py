@@ -38,3 +38,8 @@ print(m) # it prints me because python already reassigned 3 to value me
 i = 3
 j = "Jane"
 print(type(i)); print(type(j))
+
+# Case sensistive
+c = 3
+C = "mum"
+print(c); print(C) # C will not overwrite c
