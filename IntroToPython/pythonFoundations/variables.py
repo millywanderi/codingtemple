@@ -33,3 +33,8 @@ print("My favorite number is", 3)
 m = 3
 m = "me"
 print(m) # it prints me because python already reassigned 3 to value me
+
+# Get the type of value assigned to a variable
+i = 3
+j = "Jane"
+print(type(i)); print(type(j))
