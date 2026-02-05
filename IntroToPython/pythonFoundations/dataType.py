@@ -64,3 +64,8 @@ print(type(x))
 x = memoryview(bytearray(4))
 print(x)
 print(type(x))
+
+# none
+x = None
+print(x)
+print(type(x))
