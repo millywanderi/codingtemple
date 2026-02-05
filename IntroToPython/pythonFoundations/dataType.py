@@ -39,7 +39,12 @@ x = {"yellow", "green", "purple"}
 print(x)
 print(type(x))
 
-# frozenset
-x = frozenset({"yellow", "green", "purple"})
+# frozenset - It removes duplicates
+x = frozenset({"yellow", "green", "purple", "yellow"})
+print(x)
+print(type(x))
+
+# bool
+x = True
 print(x)
 print(type(x))
