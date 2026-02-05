@@ -19,3 +19,7 @@ print(type(x))
 # List
 names = ["Millicent", "Kylie", "Lyle"]
 print(type(names))
+
+# tuple
+colors = ("beige", "pink", "blue")
+print(type(colors))
