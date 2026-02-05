@@ -33,3 +33,8 @@ print(list(x)) # convert to list to display the contents
 x = {"name" : "kylie", "age" : 10}
 print(x)
 print(type(x))
+
+# set
+x = {"yellow", "green", "purple"}
+print(x)
+print(type(x))
