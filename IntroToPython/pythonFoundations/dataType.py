@@ -28,3 +28,8 @@ print(type(colors))
 x = range(8)
 print(x)
 print(list(x)) # convert to list to display the contents
+
+# dict
+x = {"name" : "kylie", "age" : 10}
+print(x)
+print(type(x))
