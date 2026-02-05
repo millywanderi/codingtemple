@@ -58,3 +58,9 @@ print(type(x))
 x = bytearray(4)
 print(x)
 print(type(x))
+
+# memoryview - view object that references the memory of another binary 
+# object without copying it
+x = memoryview(bytearray(4))
+print(x)
+print(type(x))
