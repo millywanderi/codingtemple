@@ -38,3 +38,8 @@ print(type(x))
 x = {"yellow", "green", "purple"}
 print(x)
 print(type(x))
+
+# frozenset
+x = frozenset({"yellow", "green", "purple"})
+print(x)
+print(type(x))
