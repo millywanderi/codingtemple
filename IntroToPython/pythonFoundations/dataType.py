@@ -11,3 +11,7 @@ print(type(x))
 # Float
 x = 3.0
 print(type(x))
+
+# Complex
+x = 1j
+print(type(x))
