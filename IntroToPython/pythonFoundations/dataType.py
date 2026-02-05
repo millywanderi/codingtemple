@@ -15,3 +15,7 @@ print(type(x))
 # Complex
 x = 1j
 print(type(x))
+
+# List
+names = ["Millicent", "Kylie", "Lyle"]
+print(type(names))
