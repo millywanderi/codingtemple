@@ -23,3 +23,8 @@ print(type(names))
 # tuple
 colors = ("beige", "pink", "blue")
 print(type(colors))
+
+# range
+x = range(8)
+print(x)
+print(list(x)) # convert to list to display the contents
