@@ -48,3 +48,8 @@ print(type(x))
 x = True
 print(x)
 print(type(x))
+
+# bytes
+x = b"Kylie"
+print(x)
+print(type(x))
