@@ -49,7 +49,12 @@ x = True
 print(x)
 print(type(x))
 
-# bytes
+# bytes - immutable (cannot change)
 x = b"Kylie"
+print(x)
+print(type(x))
+
+# bytearray - mutable (can change)
+x = bytearray(4)
 print(x)
 print(type(x))
