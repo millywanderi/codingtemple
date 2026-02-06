@@ -17,3 +17,7 @@ print(multi_line)
 name = "Kylie"
 print(name[0]) # prints k
 print(name[3]) # prints i
+
+# Loop through a string
+for m in "kylie":
+    print(m)
