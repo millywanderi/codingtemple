@@ -25,3 +25,10 @@ for m in "kylie":
 # string length
 name = "Kylie Kinsley"
 print(len(name)) # output is 13
+
+# Check string
+txt = "I am going to the market"
+if "going" in txt:
+    print("Yes, 'going' is in txt")
+else:
+    print("No, 'going' is NOT in text")
