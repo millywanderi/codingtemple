@@ -8,4 +8,8 @@ print(name[2:5]) # output lie
 
 # slice from start
 name = "Kylie Kinsley"
-print(name[:5])
+print(name[:5]) # output Kylie
+
+# slice from end
+name = "Kylie Kinsley"
+print(name[2:]) # lie Kinsley
