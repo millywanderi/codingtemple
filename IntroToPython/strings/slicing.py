@@ -17,3 +17,7 @@ print(name[2:]) # lie Kinsley
 # Negative slicing
 name = "Kylie Kinsley"
 print(name[-5:-2]) # nsl
+
+# Slice int arrays
+pos = [1, 2, 3, 4, 5]
+print(pos[2:4]) # output 3, 4
