@@ -5,3 +5,7 @@
 # Get characters from 2 to 5
 name = "Kylie Kinsley"
 print(name[2:5]) # output lie
+
+# slice from start
+name = "Kylie Kinsley"
+print(name[:5])
