@@ -2,6 +2,11 @@
 
 # A string is a sequency of characters enclosed in '', "", or """"""
 
+# Simple stings
 name = "John"
-greeting = "Hello"
-print(greeting + " " + name)
+print(name) # print John
+
+greeting = 'Hello'
+print(greeting) # prints hello
+
+
