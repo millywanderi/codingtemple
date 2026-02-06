@@ -13,3 +13,7 @@ print(name[:5]) # output Kylie
 # slice from end
 name = "Kylie Kinsley"
 print(name[2:]) # lie Kinsley
+
+# Negative slicing
+name = "Kylie Kinsley"
+print(name[-5:-2]) # nsl
