@@ -21,3 +21,7 @@ print(name[3]) # prints i
 # Loop through a string
 for m in "kylie":
     print(m)
+
+# string length
+name = "Kylie Kinsley"
+print(len(name)) # output is 13
