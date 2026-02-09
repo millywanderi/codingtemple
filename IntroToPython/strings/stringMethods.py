@@ -4,3 +4,6 @@
 name = "Kylie Kinsley"
 print(name.upper())
 
+# Print lowercase
+name = "Kylie Kinsley"
+print(name.lower())
