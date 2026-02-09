@@ -11,3 +11,7 @@ print(name.lower())
 # strip() removes whitespaces from the beginning to te end
 name = "Kylie Kinsley "
 print(name.strip())
+
+# replace() used for replacing string
+name = "Kylie Kinsley"
+print(name.replace("K", "L"))
