@@ -8,3 +8,8 @@ print(txt)
 price = 62
 txt = f"The price is {price} dollars"
 print(txt)
+
+# modify a placeholder
+price = 62
+txt = f"The price is {price:.2f} dollars"
+print(txt)
