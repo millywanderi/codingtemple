@@ -15,3 +15,8 @@ print(name.strip())
 # replace() used for replacing string
 name = "Kylie Kinsley"
 print(name.replace("K", "L"))
+
+# split() returns a list where the text between the specified separator becomes the list items
+a = "Hello, World!"
+b = a.split(",")
+print(b)
