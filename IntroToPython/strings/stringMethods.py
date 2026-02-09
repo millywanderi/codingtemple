@@ -7,3 +7,7 @@ print(name.upper())
 # Print lowercase
 name = "Kylie Kinsley"
 print(name.lower())
+
+# strip() removes whitespaces from the beginning to te end
+name = "Kylie Kinsley "
+print(name.strip())
