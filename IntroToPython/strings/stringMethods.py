@@ -25,3 +25,10 @@ print(b)
 words = ['My', 'name', 'is', 'Kylie', 'Kinsley']
 sentence = " ".join(words)
 print(sentence)
+
+# startswith or endswith 
+sentence = "My name is Kylie Kinsley"
+print(sentence.startswith("My"))
+print(sentence.startswith("my"))
+print(sentence.endswith("Kinsley"))
+print(sentence.endswith("Kylie"))
