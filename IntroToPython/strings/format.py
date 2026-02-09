@@ -3,3 +3,8 @@
 age = 10
 txt = f"My name is Kylie and I am {age} years old"
 print(txt)
+
+# placeholders
+price = 62
+txt = f"The price is {price} dollars"
+print(txt)
