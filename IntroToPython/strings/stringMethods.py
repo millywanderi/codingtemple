@@ -20,3 +20,8 @@ print(name.replace("K", "L"))
 a = "Hello, World!"
 b = a.split(",")
 print(b)
+
+# join() joins elements of a list into strings
+words = ['My', 'name', 'is', 'Kylie', 'Kinsley']
+sentence = " ".join(words)
+print(sentence)
