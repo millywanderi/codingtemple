@@ -4,4 +4,7 @@
 a = "Kylie"
 b = "Kinsley"
 c = a + b
-print(c) # prints KylieKinsley
+d = a + " " + b
+print(c) # outputs KylieKinsley
+print(d) # outputs Kylie Kinsley
+
