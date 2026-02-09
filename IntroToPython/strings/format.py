@@ -13,3 +13,7 @@ print(txt)
 price = 62
 txt = f"The price is {price:.2f} dollars"
 print(txt)
+
+# Add math operaion
+txt = f"The price is {31 * 2}"
+print(txt)
