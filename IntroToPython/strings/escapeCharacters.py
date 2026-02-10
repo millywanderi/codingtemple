@@ -23,3 +23,7 @@ print(txt)
 # tab
 txt = "Kylie\t\tKinsley"
 print(txt)
+
+# backspace to erase a character
+txt = "Kylie  \b\bKinsley"
+print(txt)
