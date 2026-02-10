@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import random
 
 # Python built-in methods upper and lower case
 name = "Kylie Kinsley"
@@ -46,3 +47,16 @@ print(my_string.upper())
 print(my_string.strip())
 print(my_string.replace("temple", "temp"))
 print(my_string.split())
+
+"""
+Final Challenge: Build a text-based name generator that combines 
+random first and last names using string manipulation.
+"""
+first_names = ["Steve", "Millicent", "Kylie", "Lyle"]
+last_names = ["Njogu", "Nyambura", "Wanjiku", "Macharia"]
+
+first = random.choice(first_names)
+last = random.choice(last_names)
+
+full_name = f"{first} {last}"
+print("Your generated name is:", full_name)

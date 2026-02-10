@@ -4,4 +4,26 @@
 txt = "Her nickname is \"Ciku\""
 print(txt)
 
+# Escape a single quote
+txt = "I don\'t like you"
+print(txt)
 
+# Escape backslash
+txt = "You are supposed to insert \\ as a backslash"
+print(txt)
+
+# Escape new line
+txt = "Hello!\nI will call in the morning."
+print(txt)
+
+# Carriage return
+txt = "Hello\rthere!"
+print(txt)
+
+# tab
+txt = "Kylie\t\tKinsley"
+print(txt)
+
+# backspace to erase a character
+txt = "Kylie  \b\bKinsley"
+print(txt)
