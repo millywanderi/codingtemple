@@ -19,3 +19,7 @@ print(txt)
 # Carriage return
 txt = "Hello\rthere!"
 print(txt)
+
+# tab
+txt = "Kylie\t\tKinsley"
+print(txt)
