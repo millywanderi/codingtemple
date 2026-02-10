@@ -11,3 +11,7 @@ print(txt)
 # Escape backslash
 txt = "You are supposed to insert \\ as a backslash"
 print(txt)
+
+# Escape new line
+txt = "Hello!\nI will call in the morning."
+print(txt)
