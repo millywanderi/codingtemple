@@ -15,3 +15,7 @@ print(txt)
 # Escape new line
 txt = "Hello!\nI will call in the morning."
 print(txt)
+
+# Carriage return
+txt = "Hello\rthere!"
+print(txt)
