@@ -7,3 +7,7 @@ print(txt)
 # Escape a single quote
 txt = "I don\'t like you"
 print(txt)
+
+# Escape backslash
+txt = "You are supposed to insert \\ as a backslash"
+print(txt)
