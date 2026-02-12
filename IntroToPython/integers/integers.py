@@ -28,3 +28,8 @@ print(f"Final Amount after 10% discount: ${final_amount}")
 # Exponentiation and Powers
 x = 2 ** 3
 print(x)
+
+# Use pow()
+x = 2
+y = 3
+print(pow(x,y))
