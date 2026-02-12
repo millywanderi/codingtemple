@@ -43,3 +43,7 @@ x = 3.14
 y = 3.57
 print(round(x))
 print(round(y))
+
+# convert string into integer
+x = "153"
+print(int(x))
