@@ -24,3 +24,67 @@ discount = 10/100 * total_cost
 final_amount = total_cost - discount
 print(f"The Total Cost: ${total_cost}")
 print(f"Final Amount after 10% discount: ${final_amount}")
+
+# Exponentiation and Powers
+x = 2 ** 3
+print(x)
+
+# Use pow()
+x = 2
+y = 3
+print(pow(x,y))
+
+# abs() function
+x = -10
+print(abs(x)) # output is 10
+
+# round() function
+x = 3.14
+y = 3.57
+print(round(x))
+print(round(y))
+
+# convert string into integer
+x = "153"
+print(int(x))
+
+x = 153
+print(str(x)) # it will print 153 but the class type is str
+
+# modulus %
+x = 7
+y = 4
+print(x % y) # output is 3
+
+# coersion
+x = 2
+y = 3.1
+print(x + y) # output is 5.1
+
+"""Final Challenge: Design a simple calculator that performs 
+operations on two integers provided by the user.
+Ask the user to input two numbers.
+Perform basic arithmetic operations (add, subtract, multiply, divide).
+Display the results.
+"""
+
+# prompt the user to insert the number
+num_1 = int(input("Enter your first number: "))
+num_2 = int(input("Enter your second number: "))
+
+# perform basic arithmetic operations
+addition = num_1 + num_2
+subtraction = num_1 - num_2
+multiplication = num_1 * num_2
+
+# handle zero input  when performing division
+if num_2 != 0:
+    division = num_1 / num_2
+else:
+    division = "Undefined (cannot divide by zero)"
+
+# display the output
+print(addition)
+print(subtraction)
+print(multiplication)
+print(division)
