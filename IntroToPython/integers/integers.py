@@ -60,3 +60,13 @@ print(x % y) # output is 3
 x = 2
 y = 3.1
 print(x + y) # output is 5.1
+
+"""Final Challenge: Design a simple calculator that performs 
+operations on two integers provided by the user.
+Ask the user to input two numbers.
+Perform basic arithmetic operations (add, subtract, multiply, divide).
+Display the results.
+"""
+num_1 = int(input("Enter your first number: "))
+num_2 = int(input("Enter your second number: "))
+print(num_1 + num_2)
