@@ -38,4 +38,8 @@ print(pow(x,y))
 x = -10
 print(abs(x)) # output is 10
 
-
+# round() function
+x = 3.14
+y = 3.57
+print(round(x))
+print(round(y))
