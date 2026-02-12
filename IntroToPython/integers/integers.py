@@ -47,3 +47,6 @@ print(round(y))
 # convert string into integer
 x = "153"
 print(int(x))
+
+x = 153
+print(str(x)) # it will print 153 but the class type is str
