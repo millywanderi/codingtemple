@@ -67,9 +67,19 @@ Ask the user to input two numbers.
 Perform basic arithmetic operations (add, subtract, multiply, divide).
 Display the results.
 """
+
+# prompt the user to insert the number
 num_1 = int(input("Enter your first number: "))
 num_2 = int(input("Enter your second number: "))
+
+# perform basic arithmetic operations
 addition = num_1 + num_2
 subtraction = num_1 - num_2
 multiplication = num_1 * num_2
-division = num_1 / num_2
+
+# handle zero input  when performing division
+if num_2 != 0:
+    division = num_1 / num_2
+else:
+    division = "Undefined (cannot divide by zero)"
+
