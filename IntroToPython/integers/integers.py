@@ -24,3 +24,7 @@ discount = 10/100 * total_cost
 final_amount = total_cost - discount
 print(f"The Total Cost: ${total_cost}")
 print(f"Final Amount after 10% discount: ${final_amount}")
+
+# Exponentiation and Powers
+x = 2 ** 3
+print(x)
