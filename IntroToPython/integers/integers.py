@@ -83,3 +83,8 @@ if num_2 != 0:
 else:
     division = "Undefined (cannot divide by zero)"
 
+# display the output
+print(addition)
+print(subtraction)
+print(multiplication)
+print(division)
