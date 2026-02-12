@@ -69,4 +69,7 @@ Display the results.
 """
 num_1 = int(input("Enter your first number: "))
 num_2 = int(input("Enter your second number: "))
-print(num_1 + num_2)
+addition = num_1 + num_2
+subtraction = num_1 - num_2
+multiplication = num_1 * num_2
+division = num_1 / num_2
