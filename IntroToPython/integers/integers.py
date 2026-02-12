@@ -50,3 +50,8 @@ print(int(x))
 
 x = 153
 print(str(x)) # it will print 153 but the class type is str
+
+# modulus %
+x = 7
+y = 4
+print(x % y)
