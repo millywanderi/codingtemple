@@ -33,3 +33,9 @@ print(x)
 x = 2
 y = 3
 print(pow(x,y))
+
+# abs() function
+x = -10
+print(abs(x)) # output is 10
+
+
