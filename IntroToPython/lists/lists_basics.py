@@ -7,3 +7,7 @@ print(fruits)
 # Lists allow duplicates
 fruits = ["apple", "mango", "banana", "apple"]
 print(fruits)
+
+# Get the list length
+fruits = ["apple", "mango", "banana"]
+print(len(fruits))
