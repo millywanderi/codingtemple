@@ -13,4 +13,5 @@ list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 sublist1 = list1[1:4]
 print(sublist1) # output [2, 3, 4]
 print(list1[:4]) # [1, 2, 3, 4]
+print(list1[2:]) # [3, 4, 5, 6, 7, 8, 9]
 
