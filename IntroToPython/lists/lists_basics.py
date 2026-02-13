@@ -31,3 +31,7 @@ list3 = ["True", "False", "True"]
 print(type(list1))
 print(type(list2))
 print(type(list3))
+
+# use list constructor to construct new list
+newlist = list(("Steve", "Millicent", "Kylie", "Lyle"))
+print(newlist)
