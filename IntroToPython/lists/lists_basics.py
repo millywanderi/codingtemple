@@ -11,3 +11,11 @@ print(fruits)
 # Get the list length
 fruits = ["apple", "mango", "banana"]
 print(len(fruits))
+
+# one can list items of various data types
+list1 = ["apple", "mango", "banana"]
+list2 = [10, 20, 30]
+list3 = ["True", "False", "True"]
+print(list1)
+print(list2)
+print(list3)
