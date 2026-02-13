@@ -23,3 +23,11 @@ print(list3)
 # One can mix different data types in one list
 list1 = [23, "True", 3.0, "True"]
 print(list1)
+
+# Get the list data type
+list1 = ["apple", "mango", "banana"]
+list2 = [10, 20, 30]
+list3 = ["True", "False", "True"]
+print(type(list1))
+print(type(list2))
+print(type(list3))
