@@ -19,3 +19,7 @@ list3 = ["True", "False", "True"]
 print(list1)
 print(list2)
 print(list3)
+
+# One can mix different data types in one list
+list1 = [23, "True", 3.0, "True"]
+print(list1)
