@@ -15,7 +15,11 @@
 
 ***We covered the following areas***
 
-* **Foundation to python.** Here, we learnt about python basics, including variables, Data Types, Operations, and control structures.
+* **Foundation to python.** Here, we learnt about python basics, 
+including variables, Data Types, Operations, and control structures.
 * **Mastering python strings.** We tackled string operations, 
 concertenation, repetation, length, accessing substrings, formating, 
 and string methods.
+* **Working with Python Integers.** Understand how to work with 
+integers in Python, perform basic arithmetic operations, 
+and apply integer-related functions.
