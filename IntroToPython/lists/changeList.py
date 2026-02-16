@@ -9,3 +9,8 @@ print(names) # prints ['Steve', 'Millicent', 'Kylie', 'Lyle']
 names = ["Steve", "Millie", "Kylie", "Lyle"]
 names[1:3] = ["Millicent", "Kinsley"]
 print(names)
+
+# change the second item by replacing it with two values
+names = ["Steve", "Millie", "Kylie", "Lyle"]
+names[1:2] = ["Millicent", "Kinsley"]
+print(names)
