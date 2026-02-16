@@ -14,3 +14,8 @@ print(names)
 names = ["Steve", "Millie", "Kylie", "Lyle"]
 names.pop(1)
 print(names)
+
+# use pop to remove the last item
+names = ["Steve", "Millie", "Kylie", "Lyle"]
+names.pop()
+print(names)
