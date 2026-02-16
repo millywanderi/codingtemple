@@ -24,3 +24,8 @@ print(names)
 names = ["Steve", "Millie", "Kylie", "Lyle"]
 del names[0]
 print(names)
+
+# use clear() to empty the list
+names = ["Steve", "Millie", "Kylie", "Lyle"]
+names.clear()
+print(names)
