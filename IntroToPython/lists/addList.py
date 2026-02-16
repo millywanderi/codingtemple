@@ -16,7 +16,14 @@ names = ["boy", "girl", "man"]
 myList.extend(names)
 print(myList)
 
-# use extend() to add iterable object
+# use extend() to add iterable object tuple
 myList = [1, 2, 3]
 myTuple = ("boy", "girl", "man")
 myList.extend(myTuple)
+
+# use extend() to add items using a dictionary
+myList = [1, 2, 3]
+myDict = {"John" : 22,
+        "Jane": 12}
+myList.extend(myDict)
+print(myList)
