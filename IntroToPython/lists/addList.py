@@ -15,3 +15,8 @@ myList = [1, 2, 3]
 names = ["boy", "girl", "man"]
 myList.extend(names)
 print(myList)
+
+# use extend() to add iterable object
+myList = [1, 2, 3]
+myTuple = ("boy", "girl", "man")
+myList.extend(myTuple)
