@@ -9,3 +9,9 @@ print(names)
 names = ["Steve", "Millie", "Kylie", "Lyle"]
 names.insert(2, "Kinsley")
 print(names)
+
+# use extend() to extend current list
+myList = [1, 2, 3]
+names = ["boy", "girl", "man"]
+myList.extend(names)
+print(myList)
