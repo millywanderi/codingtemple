@@ -14,3 +14,8 @@ print(names)
 names = ["Steve", "Millie", "Kylie", "Lyle"]
 names[1:2] = ["Millicent", "Kinsley"]
 print(names)
+
+# change the third and forth value by replacing with one word
+names = ["Steve", "Millie", "Kylie", "Lyle"]
+names[1:4] = ["children"]
+print(names)
