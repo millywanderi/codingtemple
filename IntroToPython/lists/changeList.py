@@ -4,3 +4,8 @@
 names = ["Steve", "Millie", "Kylie", "Lyle"]
 names[1] = "Millicent"
 print(names) # prints ['Steve', 'Millicent', 'Kylie', 'Lyle']
+
+# change the range of item values
+names = ["Steve", "Millie", "Kylie", "Lyle"]
+names[1:3] = ["Millicent", "Kinsley"]
+print(names)
