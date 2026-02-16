@@ -19,3 +19,8 @@ print(names)
 names = ["Steve", "Millie", "Kylie", "Lyle"]
 names[1:4] = ["children"]
 print(names)
+
+# insert items
+fruits = ["mango", "watermelon", "berries"]
+fruits.insert(2, "apple")
+print(fruits)
