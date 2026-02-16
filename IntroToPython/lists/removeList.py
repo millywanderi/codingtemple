@@ -19,3 +19,8 @@ print(names)
 names = ["Steve", "Millie", "Kylie", "Lyle"]
 names.pop()
 print(names)
+
+# del() can also be used to delete the specified index item
+names = ["Steve", "Millie", "Kylie", "Lyle"]
+del names[0]
+print(names)
