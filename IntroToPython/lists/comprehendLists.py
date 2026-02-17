@@ -8,3 +8,13 @@ for x in fruits:
     if "a" in x:
         newfruits.append(x)
 print(newfruits)
+
+# One can comprehend above using the following
+fruits = ["apple", "berries", "banana", "mango", "date"]
+newfruits = [x for x in fruits if "a" in x]
+print(newfruits)
+
+# condition
+fruits = ["apple", "berries", "banana", "mango", "date"]
+newfruits = [x for x in fruits if x != "banana"]
+print(newfruits)
