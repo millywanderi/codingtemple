@@ -47,10 +47,14 @@ Print the first item in the list
 Print the last item using negative indexing.
 Use .append() to add "elderberry" to the end of the list.
 Use .insert() to add "blueberry" at index 1.
+Use .remove() to remove "banana"
+Use del to delete the first item from the list.
 """
 print(fruits[0])
 print(fruits[-1])
 fruits.append("elderberry")
 print(fruits)
 fruits.insert(1, "blueberry")
+print(fruits)
+fruits.remove("banana")
 print(fruits)
