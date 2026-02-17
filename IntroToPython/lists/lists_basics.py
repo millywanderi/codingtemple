@@ -58,3 +58,5 @@ fruits.insert(1, "blueberry")
 print(fruits)
 fruits.remove("banana")
 print(fruits)
+del fruits[0]
+print(fruits)
