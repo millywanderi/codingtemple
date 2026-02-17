@@ -49,6 +49,8 @@ Use .append() to add "elderberry" to the end of the list.
 Use .insert() to add "blueberry" at index 1.
 Use .remove() to remove "banana"
 Use del to delete the first item from the list.
+Create and print a subset of the list called citrus_fruits 
+containing items from index 1 to 3 (inclusive of 1, exclusive of 3).
 """
 print(fruits[0])
 print(fruits[-1])
@@ -60,3 +62,6 @@ fruits.remove("banana")
 print(fruits)
 del fruits[0]
 print(fruits)
+
+citrus_fruits = fruits[1:3]
+print(citrus_fruits)
