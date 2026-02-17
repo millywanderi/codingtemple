@@ -45,6 +45,10 @@ fruits = ["apple", "banana", "cherry", "date"]
 """
 Print the first item in the list
 Print the last item using negative indexing.
+Use .append() to add "elderberry" to the end of the list.
+Use .insert() to add "blueberry" at index 1.
 """
 print(fruits[0])
 print(fruits[-1])
+fruits.append("elderberry")
+print(fruits)
