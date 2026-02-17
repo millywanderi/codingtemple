@@ -25,3 +25,10 @@ fruits = ["mango", "banana", "apple"]
 fruits = ["mango", "banana", "apple", "berry"]
 for index, item in enumerate(fruits):
     print(f"index: {index} - item: {item}")
+
+# Loop in Multiple Lists with zip()
+fruits = ["mango", "banana", "apple", "berry"]
+price = [30, 10, 25, 50]
+
+for item, amount in zip(fruits, price):
+    print(f"The {item} costs ${amount}")
