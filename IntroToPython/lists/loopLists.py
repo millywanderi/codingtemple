@@ -20,3 +20,8 @@ while x < len(fruits):
 # Looping Using List Comprehension
 fruits = ["mango", "banana", "apple"]
 [print(x) for x in fruits]
+
+# Getting the index in a loop with enumerate()
+fruits = ["mango", "banana", "apple", "berry"]
+for index, item in enumerate(fruits):
+    print(f"index: {index} - item: {item}")
