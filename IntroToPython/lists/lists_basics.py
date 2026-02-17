@@ -35,3 +35,15 @@ print(type(list3))
 # use list constructor to construct new list
 newlist = list(("Steve", "Millicent", "Kylie", "Lyle"))
 print(newlist)
+
+"""
+Define a list called "fruits" containing the following items: 
+"apple", "banana", "cherry", and "date".
+"""
+fruits = ["apple", "banana", "cherry", "date"]
+
+"""
+Print the first item in the list
+Print the last item using negative indexing.
+"""
+print(fruits[0])
