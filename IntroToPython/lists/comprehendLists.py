@@ -18,3 +18,7 @@ print(newfruits)
 fruits = ["apple", "berries", "banana", "mango", "date"]
 newfruits = [x for x in fruits if x != "banana"]
 print(newfruits)
+
+# iterate
+newlist = [x for x in range(10)]
+print(newlist)
