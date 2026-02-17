@@ -47,3 +47,4 @@ Print the first item in the list
 Print the last item using negative indexing.
 """
 print(fruits[0])
+print(fruits[-1])
