@@ -26,3 +26,8 @@ print(newlist)
 # Use condition to iterate
 newlist = [x for x in range(10) if x <= 5]
 print(newlist)
+
+# expression
+fruits = ["apple", "berries", "banana", "mango", "date"]
+newlist = [x.upper() for x in fruits if "e" in x]
+print(newlist)
