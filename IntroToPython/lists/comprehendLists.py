@@ -31,3 +31,7 @@ print(newlist)
 fruits = ["apple", "berries", "banana", "mango", "date"]
 newlist = [x.upper() for x in fruits if "e" in x]
 print(newlist)
+
+newlist = ["hello" for x in fruits]
+print(newlist)
+
