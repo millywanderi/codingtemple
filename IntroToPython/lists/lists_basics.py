@@ -35,3 +35,33 @@ print(type(list3))
 # use list constructor to construct new list
 newlist = list(("Steve", "Millicent", "Kylie", "Lyle"))
 print(newlist)
+
+"""
+Define a list called "fruits" containing the following items: 
+"apple", "banana", "cherry", and "date".
+"""
+fruits = ["apple", "banana", "cherry", "date"]
+
+"""
+Print the first item in the list
+Print the last item using negative indexing.
+Use .append() to add "elderberry" to the end of the list.
+Use .insert() to add "blueberry" at index 1.
+Use .remove() to remove "banana"
+Use del to delete the first item from the list.
+Create and print a subset of the list called citrus_fruits 
+containing items from index 1 to 3 (inclusive of 1, exclusive of 3).
+"""
+print(fruits[0])
+print(fruits[-1])
+fruits.append("elderberry")
+print(fruits)
+fruits.insert(1, "blueberry")
+print(fruits)
+fruits.remove("banana")
+print(fruits)
+del fruits[0]
+print(fruits)
+
+citrus_fruits = fruits[1:3]
+print(citrus_fruits)
