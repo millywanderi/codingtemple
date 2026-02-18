@@ -14,3 +14,7 @@ print(numbers)
 names = ["Steve", "Millie", "Kylie", "Lyle"]
 names.sort(reverse = True)
 print(names)
+
+numbers = [23, 45, -7, 3.14]
+numbers.sort(reverse = True)
+print(numbers)
