@@ -9,3 +9,8 @@ print(names)
 numbers = [23, 45, -7, 3.14]
 numbers.sort()
 print(numbers)
+
+# sort descending
+names = ["Steve", "Millie", "Kylie", "Lyle"]
+names.sort(reverse = True)
+print(names)
