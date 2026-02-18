@@ -26,3 +26,8 @@ def myfunc(x):
 numbers = [75, 50, 22, 83, 100]
 numbers.sort(key = myfunc)
 print(numbers)
+
+# sort is case sensitive
+names = ["Steve", "millie", "Kylie", "lyle"]
+names.sort(key = str.lower)
+print(names)
