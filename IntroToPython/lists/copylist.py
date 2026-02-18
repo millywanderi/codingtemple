@@ -9,3 +9,8 @@ print(mynames)
 names = ["Steve", "Millie", "Kylie", "Lyle"]
 mynames = list(names)
 print(mynames)
+
+# make copy using slice operator
+names = ["Steve", "Millie", "Kylie", "Kinsley", "Lyle"]
+mynames = names[:]
+print(mynames)
