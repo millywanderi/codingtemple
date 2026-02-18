@@ -31,3 +31,8 @@ print(numbers)
 names = ["Steve", "millie", "Kylie", "lyle"]
 names.sort(key = str.lower)
 print(names)
+
+# reverse()
+names = ["Steve", "Millie", "Kylie", "Lyle"]
+names.reverse()
+print(names)
