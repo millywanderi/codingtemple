@@ -38,3 +38,11 @@ elif temperature > 10:
     print("It's cold outside")
 else:
     print("It's freezing outside")
+
+# else as a fallback
+username = "Millie"
+
+if len(username) > 0:
+    print(f"Welcome {username}")
+else:
+    print("Error, can't find the username")
