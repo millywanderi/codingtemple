@@ -23,3 +23,6 @@ and string methods.
 * **Working with Python Integers.** Understand how to work with 
 integers in Python, perform basic arithmetic operations, 
 and apply integer-related functions.
+
+* **Exploring the Power of Lists in Python.** We created, manipulated, 
+and performed basic operations on Python lists.
