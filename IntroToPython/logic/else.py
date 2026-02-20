@@ -10,3 +10,11 @@ elif a == b:
     print("a is equal to b")
 else:
     print("a is greater than b")
+
+# else without elif
+a = 30
+b = 20
+if b > a:
+    print("b is greater than a")
+else:
+    print("b is not greater than a")
