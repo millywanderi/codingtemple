@@ -14,3 +14,16 @@ colors[1] = "yellow"
 colors.append("purple")
 colors.remove("red")
 print(colors)
+
+"""
+Create a program that asks the user for their top 3 favorite books, 
+stores them in a list, and prints the list in a sorted order.
+"""
+
+# Initialize an Empty List and prompt the User for Input.
+favoritebooks = []
+for i in range(3):
+    book = input(f"Enter your favorite book {i + 1}: ")
+    favoritebooks.append(book)
+favoritebooks.sort()
+print(favoritebooks)
