@@ -25,4 +25,16 @@ x = 9
 if x % 2 == 0:
     print("x is an even number")
 else:
-    print("x is not an even number")
+    print("x is not an odd number")
+
+# combine if, elif, else conditions
+temperature = 21
+
+if temperature > 30:
+    print("It's hot outside")
+elif temperature > 20:
+    print("It's warm outside")
+elif temperature > 10:
+    print("It's cold outside")
+else:
+    print("It's freezing outside")
