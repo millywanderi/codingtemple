@@ -42,3 +42,11 @@ if email and password and is_verified:
     print("Login successful")
 else:
     print("Wrong email/password")
+
+# Range checking with logical operators
+score = 70
+
+if score >= 0 and score <= 100:
+    print("Valid score")
+else:
+    print("Invalid score")
