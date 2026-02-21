@@ -15,3 +15,8 @@ x = 30
 y = 20
 bigger = x if x > y else y
 print("Bigger is", bigger)
+
+# multiple conditions in one line
+x = 30
+y = 20
+print("X") if x > y else print("=") if x == y else print("Y")
