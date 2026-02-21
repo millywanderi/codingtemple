@@ -33,3 +33,12 @@ is_adult = False
 is_home = True
 if (age > 9 and is_adult) or is_home:
     print("You are a pre-teen")
+
+# User authentication check
+email = "mnw@gmail.com"
+password = "mnw"
+is_verified = True
+if email and password and is_verified:
+    print("Login successful")
+else:
+    print("Wrong email/password")
