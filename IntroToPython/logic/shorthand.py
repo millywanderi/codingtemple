@@ -20,3 +20,9 @@ print("Bigger is", bigger)
 x = 30
 y = 20
 print("X") if x > y else print("=") if x == y else print("Y")
+
+# find 2 maximu numbers
+x = 30
+y = 20
+max_num = x if x > y else y
+print("Maximum number", max_num)
