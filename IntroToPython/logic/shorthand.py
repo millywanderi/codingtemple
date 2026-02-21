@@ -26,3 +26,8 @@ x = 30
 y = 20
 max_num = x if x > y else y
 print("Maximum number", max_num)
+
+# find the username
+username = ""
+display_username = username if username else "Guest"
+print("Welcome!", display_username)
