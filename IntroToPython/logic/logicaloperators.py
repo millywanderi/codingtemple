@@ -26,3 +26,10 @@ is_student = False
 has_discount_code = True
 if (age < 18 or age > 65) and not is_student or has_discount_code:
     print("Discount applies!")
+
+# Using Parentheses for Clarity
+age = 12
+is_adult = False
+is_home = True
+if (age > 9 and is_adult) or is_home:
+    print("You are a pre-teen")
