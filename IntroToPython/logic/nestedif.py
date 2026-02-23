@@ -72,3 +72,17 @@ if username:
         print("Invalid password")
 else:
     print("Login unsuccessful")
+
+# Grade calculation with nested logic
+score = 92
+extra_credit = 5
+
+if score > 90:
+    if extra_credit > 0:
+        print("A+")
+    else:
+        print("A")
+elif score > 80:
+    print("B")
+else:
+    print("C and below")
