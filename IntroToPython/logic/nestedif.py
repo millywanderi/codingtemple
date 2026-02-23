@@ -9,6 +9,7 @@ if num > 0:
 else:
     print("The number is negative")
 
+# Request user to insert 0-20 number
 x = int(input("Enter a number between 0 and 20:", ))
 if x > 10:
     print("Is above 10.")
@@ -17,4 +18,16 @@ if x > 10:
     else:
         print("but not above 100")
 else:
-    print("Is negative")
+    print("Is below 10.")
+
+# Checking multiple conditions with nesting
+age = 28
+has_licence = True
+
+if age >= 18:
+    if has_licence:
+        print("You can drive.")
+    else:
+        print("You need a licence.")
+else:
+    print("You are too young to drive.")
