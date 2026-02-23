@@ -5,3 +5,4 @@
 ## Mastering Python strings
 ## Working with python integers
 ## Exploring the power of lists in Python
+## Conditional Logic in Python
