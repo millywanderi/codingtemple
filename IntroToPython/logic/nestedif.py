@@ -56,3 +56,19 @@ if temperature > 22 and is_sunny:
     print("Perfect weather for swimming")
 else:
     print("Too cold")
+
+# Login validation with nested checks
+username = "millie"
+password = "mnw123"
+is_active = True
+
+if username:
+    if password:
+        if is_active:
+            print("Login sucessfully")
+        else:
+            print("Account is inactive")
+    else:
+        print("Invalid password")
+else:
+    print("Login unsuccessful")
