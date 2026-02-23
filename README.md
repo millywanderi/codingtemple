@@ -26,3 +26,6 @@ and apply integer-related functions.
 
 * **Exploring the Power of Lists in Python.** We created, manipulated, 
 and performed basic operations on Python lists.
+* **Conditional Logic in Python.** Create simple and complex 
+decision-making logic in Python using if, elif, and else statements, 
+along with nested conditionals and conditional operators.
