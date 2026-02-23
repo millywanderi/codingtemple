@@ -47,3 +47,12 @@ if score >= 60:
         print("Pass but low attendance")
 else:
     print("Fail")
+
+# Nested If vs Logical Operators
+temperature = 25
+is_sunny = True
+
+if temperature > 22 and is_sunny:
+    print("Perfect weather for swimming")
+else:
+    print("Too cold")
