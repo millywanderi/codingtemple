@@ -9,3 +9,8 @@ for x in fruits:
 fruit = "banana"
 for x in fruit:
     print(x)
+
+# Measure some strings
+fruit = ["apple", "banana", "Mango"]
+for x in fruits:
+    print(x, len(x))
