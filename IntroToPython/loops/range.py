@@ -7,3 +7,7 @@ for i in range(5):
 # Iterate using the start parameter
 for i in range(2, 7):
     print(i)
+
+# Increment the sequence with 3
+for i in range(2, 30, 3):
+    print(i)
