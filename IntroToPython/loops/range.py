@@ -3,3 +3,7 @@
 # range is used to iterate over sequence of numbers
 for i in range(5):
     print(i)
+
+# Iterate using the start parameter
+for i in range(2, 7):
+    print(i)
