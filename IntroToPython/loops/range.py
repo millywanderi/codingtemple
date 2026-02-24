@@ -11,3 +11,7 @@ for i in range(2, 7):
 # Increment the sequence with 3
 for i in range(2, 30, 3):
     print(i)
+
+# Iterate a list
+for i in list(range(5, 10)):
+    print(i)
