@@ -4,3 +4,8 @@
 fruits = ["apple", "banana", "Mango"]
 for x in fruits:
     print(x)
+
+# Looping through a string
+fruit = "banana"
+for x in fruit:
+    print(x)
