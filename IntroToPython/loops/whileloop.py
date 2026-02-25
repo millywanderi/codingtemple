@@ -15,3 +15,11 @@ while x < 10:
         break
     print(x)
     x += 1
+
+# The continue Statement
+x = 5
+while x < 10:
+    x += 1
+    if x == 7:
+        continue
+    print(x)
