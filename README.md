@@ -29,3 +29,8 @@ and performed basic operations on Python lists.
 * **Conditional Logic in Python.** Create simple and complex 
 decision-making logic in Python using if, elif, and else statements, 
 along with nested conditionals and conditional operators.
+* **Python Loops: The Power of Repetition.** learning how to 
+efficiently repeat code execution for various tasks. By the end, 
+we confidently applied for and while loops to iterate over sequences, 
+manipulated data structures, and used control flow tools like break, 
+continue, and else to solve practical problems.
