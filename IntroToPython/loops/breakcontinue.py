@@ -20,3 +20,10 @@ for n in range(2, 10):
         if n % x == 0:
             print(f"{n} equals {x} * {n // x}")
             break
+
+# Do not print banana
+fruits = ["apple", "banana", "mango"]
+for x in fruits:
+    if x == "banana":
+        continue
+    print(x)
