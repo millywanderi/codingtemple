@@ -24,3 +24,13 @@ while i < 6:
     if i == 3:
         continue
     print(i)
+
+"""
+Write a Python program that prints all the even numbers between 1 and 
+20 using a while loop.
+"""
+x = 1
+while x <= 20:
+    if x % 2 == 0:
+        print(x)
+    x += 1
