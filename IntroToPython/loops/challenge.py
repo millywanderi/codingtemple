@@ -34,3 +34,17 @@ while x <= 20:
     if x % 2 == 0:
         print(x)
     x += 1
+
+"""
+Write a Python program that processes a range of numbers from 1 to 30. 
+The program should do the following
+Print all numbers from 1 to 30.
+Skip the numbers that are divisible by 3 using the continue statement.
+Stop the loop if the number is greater than 25 using the break statement.
+"""
+for x in range(1, 31):
+    if x > 25:
+        break
+    if x % 3 == 0:
+        continue
+    print(x)
