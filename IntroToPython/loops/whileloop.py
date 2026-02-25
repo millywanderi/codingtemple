@@ -23,3 +23,11 @@ while x < 10:
     if x == 7:
         continue
     print(x)
+
+# The else Statement
+x = 5
+while x < 10:
+    print(x)
+    x += 1
+else:
+    print("x is no longer less than 10")
