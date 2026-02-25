@@ -25,3 +25,11 @@ for x in range(6):
     print(x)
 else:
     print("Finally finished")
+
+# Print color of each fruit
+color = ["red", "yellow", "blue"]
+fruits = ["apple", "banana", "blueberries"]
+
+for x in color:
+    for y in fruits:
+        print(x, y)
