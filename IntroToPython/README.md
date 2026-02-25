@@ -6,3 +6,4 @@
 ## Working with python integers
 ## Exploring the power of lists in Python
 ## Conditional Logic in Python
+## Python Loops: The Power of Repetition
