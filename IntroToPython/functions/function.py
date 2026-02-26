@@ -24,3 +24,9 @@ def fahrenheit_to_celsius(fahrenheit):
 print(fahrenheit_to_celsius(77))
 print(fahrenheit_to_celsius(95))
 print(fahrenheit_to_celsius(50))
+
+# A function that returns a value
+def greetings():
+    return "Hello, welcome to my world!"
+message = greetings()
+print(message)
