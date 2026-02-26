@@ -35,3 +35,12 @@ print(message)
 def name():
     return "My name is Millie"
 print(name())
+
+# create a function that writes the Fibonacci series to an arbitrary boundary
+def fib(n):
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a + b
+    print()
+fib(2000)
