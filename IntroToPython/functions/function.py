@@ -44,3 +44,4 @@ def fib(n):
         a, b = b, a + b
     print()
 fib(2000)
+fib(100)
