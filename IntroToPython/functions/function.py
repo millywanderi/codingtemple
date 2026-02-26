@@ -30,3 +30,8 @@ def greetings():
     return "Hello, welcome to my world!"
 message = greetings()
 print(message)
+
+# return directly
+def name():
+    return "My name is Millie"
+print(name())
