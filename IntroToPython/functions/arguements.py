@@ -11,3 +11,8 @@ def my_name(first_name):
 my_name("Winnie")
 my_name("Irene")
 my_name("Millie")
+
+# A function with three arguments
+def my_name(fname, mname, lname):
+    print(fname + ' '+  mname + ' ' + lname)
+my_name("Millicent", "Nyambura", "Wanderi")
