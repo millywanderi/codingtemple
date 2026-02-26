@@ -16,3 +16,10 @@ my_name("Millie")
 def my_name(fname, mname, lname):
     print(fname + ' '+  mname + ' ' + lname)
 my_name("Millicent", "Nyambura", "Wanderi")
+
+# Default Parameter Values
+def my_country(country = "Kenya"):
+    print("I am from", country)
+my_country("Rwanda")
+my_country()
+my_country("USA")
