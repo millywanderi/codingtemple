@@ -44,3 +44,10 @@ print(names[0])
 print(names[1])
 print(names[2])
 print(names[3])
+
+# A function that returns a tuple
+def my_function():
+    return (20, 30)
+a, b = my_function()
+print("a:", a)
+print("b:", b)
