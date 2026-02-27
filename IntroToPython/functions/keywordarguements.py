@@ -29,3 +29,9 @@ def my_function(person):
     print("Age", person["age"])
 my_person = {"name": "Steve", "age": 36}
 my_function(my_person)
+
+# Functions can return values using the return statement
+def my_function(a, b):
+    return a + b
+result = my_function(10, 20)
+print(result)
