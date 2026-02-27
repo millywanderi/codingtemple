@@ -22,3 +22,10 @@ def my_function(names):
         print(name)
 my_names = ["Steve", "Millie", "Kylie", "Lyle"]
 my_function(my_names)
+
+# Sending a dictionary as an argument
+def my_function(person):
+    print("Name", person["name"])
+    print("Age", person["age"])
+my_person = {"name": "Steve", "age": 36}
+my_function(my_person)
