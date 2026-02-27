@@ -10,3 +10,8 @@ def my_function(animal, name):
     print("I have an", animal)
     print("My", animal + "'s name is", name)
 my_function("cat", "kiti")
+
+# Mixing Positional and Keyword Arguments
+def my_function(animal, name, age):
+    print("I have a", age, "year old", animal, "named", name)
+my_function("cat", name = "kiti", age = 2)
