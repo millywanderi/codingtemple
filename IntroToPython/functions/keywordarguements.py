@@ -35,3 +35,12 @@ def my_function(a, b):
     return a + b
 result = my_function(10, 20)
 print(result)
+
+# Returning Different Data Types
+def my_function():
+    return ["Steve", "Millie", "Kylie", "Lyle"]
+names = my_function()
+print(names[0])
+print(names[1])
+print(names[2])
+print(names[3])
