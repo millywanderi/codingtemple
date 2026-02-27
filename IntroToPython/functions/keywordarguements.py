@@ -62,3 +62,8 @@ my_function("Millie")
 def my_function(name):
     print("Hello", name)
 my_function(name = "Kylie")
+
+# Keyword-Only Arguments
+def my_function(*, name):
+    print("Hello", name)
+my_function(name = "Lyle")
