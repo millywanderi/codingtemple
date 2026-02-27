@@ -51,3 +51,8 @@ def my_function():
 a, b = my_function()
 print("a:", a)
 print("b:", b)
+
+# Positional-Only Arguments
+def my_function(name, /):
+    print("Hello", name)
+my_function("Millie")
