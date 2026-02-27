@@ -67,3 +67,9 @@ my_function(name = "Kylie")
 def my_function(*, name):
     print("Hello", name)
 my_function(name = "Lyle")
+
+# Combining Positional-Only and Keyword-Only
+def my_function(a, b, /, *, c, d):
+    return a + b + c + d
+result = my_function(2, 3, c = 4, d = 5)
+print(result)
