@@ -56,3 +56,9 @@ print("b:", b)
 def my_function(name, /):
     print("Hello", name)
 my_function("Millie")
+
+# Without the , / you are actually allowed to use keyword arguments 
+# even if the function expects positional arguments
+def my_function(name):
+    print("Hello", name)
+my_function(name = "Kylie")
