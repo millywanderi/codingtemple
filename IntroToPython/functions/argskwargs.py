@@ -11,3 +11,9 @@ def my_function(*args):
     print("Type: ", type(args))
     print("I have two children, namely ", args[0] + " and", args[1])
 my_function("Kylie", "Lyle")
+
+# Using *args with Regular Arguments
+def my_function(greetings, *names):
+    for name in names:
+        print(greetings, name)
+my_function("Hello", "Kylie", "Lyle")
