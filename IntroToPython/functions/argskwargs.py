@@ -5,3 +5,9 @@
 def my_function(*kids):
     print("My youngest kid is " + kids[1])
 my_function("Kylie", "Lyle")
+
+# Accessing individual arguments from *args
+def my_function(*args):
+    print("Type: ", type(args))
+    print("I have two children, namely ", args[0] + " and", args[1])
+my_function("Kylie", "Lyle")
