@@ -39,3 +39,8 @@ def my_function(*numbers):
     return max_num
 
 print(my_function(3, 7, 2, 9, 1))
+
+# Using **kwargs to accept any number of keyword arguments
+def my_function(**kid):
+    print("His last name is " + kid["lname"])
+my_function(fname = "Lyle", lname = "Macharia")
