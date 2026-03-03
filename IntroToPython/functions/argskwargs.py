@@ -44,3 +44,11 @@ print(my_function(3, 7, 2, 9, 1))
 def my_function(**kid):
     print("His last name is " + kid["lname"])
 my_function(fname = "Lyle", lname = "Macharia")
+
+# Accessing values from **kwargs
+def my_function(**myvar):
+    print("Type:", type(myvar))
+    print("Name:", myvar["name"])
+    print("Age:", myvar["age"])
+    print("All data:", myvar)
+my_function(name = "Lyle", age = 7, city = "Nairobi")
