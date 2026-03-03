@@ -44,3 +44,14 @@ def myfunc():
     x = 300
 myfunc()
 print(x)
+
+# If you use the nonlocal keyword, the variable will belong to the 
+#outer function
+def myfunc1():
+    x = "Jane"
+    def myfunc2():
+        nonlocal x
+        x = "hello"
+    myfunc2()
+    return x
+print(myfunc1())
