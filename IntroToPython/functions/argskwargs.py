@@ -68,3 +68,10 @@ def my_function(title, *args, **kwargs):
     print("Keyword Arguements:", kwargs)
 
 my_function("User Info", "Millie", "Wanderi", age = 31, city = "Nairobi")
+
+# Unpacking Lists with *
+def my_function(a, b, c):
+    return a + b + c
+numbers = [1, 2, 3]
+results = my_function(*numbers)
+print(results)
