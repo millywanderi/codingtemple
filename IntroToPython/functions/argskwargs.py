@@ -52,3 +52,11 @@ def my_function(**myvar):
     print("Age:", myvar["age"])
     print("All data:", myvar)
 my_function(name = "Lyle", age = 7, city = "Nairobi")
+
+# Using **kwargs with Regular Arguments
+def my_function(username, **details):
+    print("Username:", username)
+    print("Additional details:")
+    for key, value in details.items():
+        print(" ", key + ":", value)
+my_function("millie", age = 31, city = "Nairobi", hobby = "coding")
