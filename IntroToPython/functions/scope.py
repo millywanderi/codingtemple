@@ -13,3 +13,10 @@ def my_function():
         print(x)
     myinnerfunction()
 my_function()
+
+# A variable created outside of a function is global and can be used by anyone
+x = 200
+def myfunct():
+    print(x)
+myfunct()
+print(x)
