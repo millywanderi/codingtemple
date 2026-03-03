@@ -35,3 +35,12 @@ def myfunc():
     x = 200
 myfunc()
 print(x)
+
+# To change the value of a global variable inside a function, 
+# refer to the variable by using the global keyword
+x = 200
+def myfunc():
+    global x
+    x = 300
+myfunc()
+print(x)
