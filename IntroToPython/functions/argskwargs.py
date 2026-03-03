@@ -60,3 +60,11 @@ def my_function(username, **details):
     for key, value in details.items():
         print(" ", key + ":", value)
 my_function("millie", age = 31, city = "Nairobi", hobby = "coding")
+
+# Combining *args and **kwargs
+def my_function(title, *args, **kwargs):
+    print("Title:", title)
+    print("Positional Arguements:", args)
+    print("Keyword Arguements:", kwargs)
+
+my_function("User Info", "Millie", "Wanderi", age = 31, city = "Nairobi")
