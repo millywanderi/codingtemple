@@ -20,3 +20,11 @@ def myfunct():
     print(x)
 myfunct()
 print(x)
+
+# The function will print the local x, and then the code will print the global x
+x = 200
+def myfunct():
+    x = 150
+    print(x)
+myfunct()
+print(x)
