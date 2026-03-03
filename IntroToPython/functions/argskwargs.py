@@ -75,3 +75,9 @@ def my_function(a, b, c):
 numbers = [1, 2, 3]
 results = my_function(*numbers)
 print(results)
+
+# Unpacking Dictionaries with **
+def my_function(fname, lname):
+    print("Hello", fname, lname)
+name = {"fname": "Millie", "lname": "Wanderi"}
+my_function(**name)
