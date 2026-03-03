@@ -39,3 +39,45 @@ def my_function(*numbers):
     return max_num
 
 print(my_function(3, 7, 2, 9, 1))
+
+# Using **kwargs to accept any number of keyword arguments
+def my_function(**kid):
+    print("His last name is " + kid["lname"])
+my_function(fname = "Lyle", lname = "Macharia")
+
+# Accessing values from **kwargs
+def my_function(**myvar):
+    print("Type:", type(myvar))
+    print("Name:", myvar["name"])
+    print("Age:", myvar["age"])
+    print("All data:", myvar)
+my_function(name = "Lyle", age = 7, city = "Nairobi")
+
+# Using **kwargs with Regular Arguments
+def my_function(username, **details):
+    print("Username:", username)
+    print("Additional details:")
+    for key, value in details.items():
+        print(" ", key + ":", value)
+my_function("millie", age = 31, city = "Nairobi", hobby = "coding")
+
+# Combining *args and **kwargs
+def my_function(title, *args, **kwargs):
+    print("Title:", title)
+    print("Positional Arguements:", args)
+    print("Keyword Arguements:", kwargs)
+
+my_function("User Info", "Millie", "Wanderi", age = 31, city = "Nairobi")
+
+# Unpacking Lists with *
+def my_function(a, b, c):
+    return a + b + c
+numbers = [1, 2, 3]
+results = my_function(*numbers)
+print(results)
+
+# Unpacking Dictionaries with **
+def my_function(fname, lname):
+    print("Hello", fname, lname)
+name = {"fname": "Millie", "lname": "Wanderi"}
+my_function(**name)
