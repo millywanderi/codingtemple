@@ -55,3 +55,15 @@ def myfunc1():
     myfunc2()
     return x
 print(myfunc1())
+
+# Understanding the LEGB rule
+x = "global"
+def outer():
+    x = "enclosing"
+    def inner():
+        x = "local"
+        print("Inner:", x)
+    inner()
+    print("Outer:", x)
+outer()
+print("Global:", x)
