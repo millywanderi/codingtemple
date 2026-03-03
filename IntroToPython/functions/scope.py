@@ -28,3 +28,10 @@ def myfunct():
     print(x)
 myfunct()
 print(x)
+
+# If you use the global keyword, the variable belongs to the global scope
+def myfunc():
+    global x
+    x = 200
+myfunc()
+print(x)
