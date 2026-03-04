@@ -25,3 +25,14 @@ def myotherfunc():
 
 print(myfunc())
 print(myotherfunc())
+
+# Functions with arguments can also be decorated
+def changecase(func):
+    def myinner(x):
+        return func(x).upper()
+    return myinner
+
+@changecase
+def myfunc(nam):
+    return "Hello " + nam
+print(myfunc("Nelly"))
