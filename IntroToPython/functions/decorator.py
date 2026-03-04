@@ -36,3 +36,14 @@ def changecase(func):
 def myfunc(nam):
     return "Hello " + nam
 print(myfunc("Nelly"))
+
+# Secure the function with *args and **kwargs arguments
+def changecase(func):
+    def myinner(*args, **kwargs):
+        return func(*args, **kwargs).upper()
+    return myinner
+
+@changecase
+def myfunc(nam):
+    return "Hello " + nam
+print(myfunc("Jerry"))
