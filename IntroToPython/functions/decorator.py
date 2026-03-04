@@ -9,3 +9,19 @@ def changecase(func):
 def my_func():
     return "Hello Sally"
 print(my_func())
+
+# Using the @changecase decorator on two functions
+def changecase(func):
+    def myinner():
+        return func().upper()
+    return myinner
+@changecase
+def myfunc():
+    return "Hello Sally"
+
+@changecase
+def myotherfunc():
+    return "I am speed"
+
+print(myfunc())
+print(myotherfunc())
