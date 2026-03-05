@@ -10,3 +10,7 @@ one expression
 # Add 10 to argument a, and return the result
 x = lambda a : a + 10
 print(x(5))
+
+# Summarize argument a, b, and c and return the result
+x = lambda a, b, c: a + b + c
+print(x(1, 2, 3))
