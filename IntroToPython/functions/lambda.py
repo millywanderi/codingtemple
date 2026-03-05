@@ -42,3 +42,8 @@ print(doubled)
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 odd_numbers = list(filter(lambda a : a % 2 != 0, numbers))
 print(odd_numbers)
+
+# Sort a list of tuples by the second element
+students = [("Steve", 40), ("Millie", 31), ("Kylie", 10), ("Lyle", 7)]
+sorted_students = sorted(students, key=lambda x: x[1])
+print(sorted_students)
