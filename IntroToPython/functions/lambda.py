@@ -20,3 +20,9 @@ def myfunc(n):
     return lambda a : a * n
 mydoubler = myfunc(2)
 print(mydoubler(11))
+
+# make a function that always triples the number you send in
+def myfunc(n):
+    return lambda a : a * n
+mytrippler = myfunc(3)
+print(mytrippler(22))
