@@ -37,3 +37,8 @@ print(myincreament(4))
 numbers = [1, 2, 3, 4, 5]
 doubled = list(map(lambda a : a * 2, numbers))
 print(doubled)
+
+# Using Lambda with filter()
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+odd_numbers = list(filter(lambda a : a % 2 != 0, numbers))
+print(odd_numbers)
