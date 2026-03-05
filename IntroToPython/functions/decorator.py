@@ -82,3 +82,8 @@ def addgreeting(func):
 def myfunc():
     return "Millie"
 print(myfunc())
+
+# A function's name can be returned with the __name__ attribute
+def myfunction():
+    return "Have a blessed day"
+print(myfunction.__name__)
