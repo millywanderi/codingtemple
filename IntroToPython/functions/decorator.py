@@ -65,3 +65,51 @@ def changecase(n):
 def myfunc():
     return "Hello Peter"
 print(myfunc())
+
+# One decorator for upper case, and one for adding a greeting
+def changecase(func):
+    def myinner():
+        return func().upper()
+    return myinner
+
+def addgreeting(func):
+    def myinner():
+        return "Hello " + func() + " Have a good day!"
+    return myinner
+
+@changecase
+@addgreeting
+def myfunc():
+    return "Millie"
+print(myfunc())
+
+# A function's name can be returned with the __name__ attribute
+def myfunction():
+    return "Have a blessed day"
+print(myfunction.__name__)
+
+# returning the name from a decorated function and you will not get 
+#the same result
+def changecase(func):
+    def myinner():
+        return func().upper()
+    return myinner
+
+@changecase
+def myfunc():
+    return "Have a great day!"
+print(myfunc.__name__)
+
+# Import functools.wraps to preserve the original function name and docstring
+import functools
+
+def changecase(func):
+    @functools.wraps(func)
+    def myinner():
+        return func().upper()
+    return myinner
+
+@changecase
+def myfunc():
+    return "My day was good."
+print(myfunc.__name__)
