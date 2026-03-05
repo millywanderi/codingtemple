@@ -47,3 +47,8 @@ print(odd_numbers)
 students = [("Steve", 40), ("Millie", 31), ("Kylie", 10), ("Lyle", 7)]
 sorted_students = sorted(students, key=lambda x: x[1])
 print(sorted_students)
+
+# Sort strings by length
+fruits = ["apple", "banana", "cherry", "mango", "peas"]
+sorted_length = sorted(fruits, key=lambda x : len(x))
+print(sorted_length)
