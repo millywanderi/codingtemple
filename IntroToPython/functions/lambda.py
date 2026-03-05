@@ -32,3 +32,8 @@ def myfunct(n):
     return lambda a : a + n
 myincreament = myfunc(6)
 print(myincreament(4))
+
+# Using Lambda with map()
+numbers = [1, 2, 3, 4, 5]
+doubled = list(map(lambda a : a * 2, numbers))
+print(doubled)
