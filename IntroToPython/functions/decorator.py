@@ -87,3 +87,15 @@ print(myfunc())
 def myfunction():
     return "Have a blessed day"
 print(myfunction.__name__)
+
+# returning the name from a decorated function and you will not get 
+#the same result
+def changecase(func):
+    def myinner():
+        return func().upper()
+    return myinner
+
+@changecase
+def myfunc():
+    return "Have a great day!"
+print(myfunc.__name__)
