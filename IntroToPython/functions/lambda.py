@@ -26,3 +26,9 @@ def myfunc(n):
     return lambda a : a * n
 mytrippler = myfunc(3)
 print(mytrippler(22))
+
+# make increment 
+def myfunct(n):
+    return lambda a : a + n
+myincreament = myfunc(6)
+print(myincreament(4))
