@@ -99,3 +99,17 @@ def changecase(func):
 def myfunc():
     return "Have a great day!"
 print(myfunc.__name__)
+
+# Import functools.wraps to preserve the original function name and docstring
+import functools
+
+def changecase(func):
+    @functools.wraps(func)
+    def myinner():
+        return func().upper()
+    return myinner
+
+@changecase
+def myfunc():
+    return "My day was good."
+print(myfunc.__name__)
