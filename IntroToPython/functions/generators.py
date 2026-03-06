@@ -50,3 +50,7 @@ print(list_comp)
 gen_exp = (x * x for x in range(5))
 print(gen_exp)
 print(list(gen_exp))
+
+# Using a generator expression with sum
+total = sum(x * x for x in range(10))
+print(total)
