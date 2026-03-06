@@ -28,3 +28,15 @@ gen = large_sequence(1000000)
 print(next(gen))
 print(next(gen))
 print(next(gen))
+
+# manually iterate through a generator using the next() function
+def simple_gen():
+    yield "Steve"
+    yield "Millie"
+    yield "Kylie"
+    yield "Lyle"
+gen = simple_gen()
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
