@@ -40,3 +40,10 @@ print(next(gen))
 print(next(gen))
 print(next(gen))
 print(next(gen))
+
+# List comprehension vs generator expression
+# list comprehension - creates lists
+list_comp = [x * x for x in range(5)]
+print(list_comp)
+
+# Generator comprehension - creates a generator
