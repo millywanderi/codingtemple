@@ -54,3 +54,13 @@ print(list(gen_exp))
 # Using a generator expression with sum
 total = sum(x * x for x in range(10))
 print(total)
+
+# Generate 100 Fibonacci numbers
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+gen = fibonacci()
+for _ in range(100):
+    print(next(gen))
