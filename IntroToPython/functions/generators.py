@@ -18,3 +18,13 @@ def count_up_to(n):
         count += 1
 for num in count_up_to(7):
     print(num)
+
+# Generator for large sequences
+def large_sequence(n):
+    for i in range(n):
+        yield i
+
+gen = large_sequence(1000000)
+print(next(gen))
+print(next(gen))
+print(next(gen))
