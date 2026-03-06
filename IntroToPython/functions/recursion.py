@@ -26,3 +26,12 @@ def fibonacci(n):
     else:
         return fibonacci(n - 1) + fibonacci(n - 2)
 print(fibonacci(7))
+
+# Recursion can be used to process lists by handling one element at a time
+def sum_list(numbers):
+    if len(numbers) == 0:
+        return 0
+    else:
+        return numbers[0] + sum_list(numbers[1:])
+my_list = [1, 2, 3, 4, 5]
+print(sum_list(my_list))
