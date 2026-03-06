@@ -35,3 +35,13 @@ def sum_list(numbers):
         return numbers[0] + sum_list(numbers[1:])
 my_list = [1, 2, 3, 4, 5]
 print(sum_list(my_list))
+
+# Find the maximum value in a list
+def find_max(num):
+    if len(num) == 1:
+        return num[0]
+    else:
+        max_rest_num = find_max(num[1:])
+        return num[0] if num[0] > max_rest_num else max_rest_num
+my_list = [ 2, 7, 18, 1, 5]
+print(find_max(my_list))
