@@ -7,3 +7,4 @@
 ## Exploring the power of lists in Python
 ## Conditional Logic in Python
 ## Python Loops: The Power of Repetition
+## Function Mastery in Python
