@@ -39,3 +39,8 @@ of Python functions, starting with understanding what functions are
 and why they are useful for writing cleaner, more maintainable code. 
 We also explore the concept of function scope, learning the difference
 between local and global variables.
+* **Safeguarding Your Code - Python Exception Handling.** Had a solid
+understanding of Python's exception handling mechanisms, enabling us
+to write more robust and error-tolerant code. We learn how to identify
+and handle common exceptions using the try, except, else, and finally
+blocks, as well as how to raise predefined and custom exceptions.
