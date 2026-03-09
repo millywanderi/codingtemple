@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import sys
+
 """
 The try block lets you test a block of code for errors.
 
@@ -47,3 +49,15 @@ except:
     print("Something went wrong")
 finally:
     print("The 'try except' is finished")
+
+# Try to open and write to a file that is not writable
+try:
+    f = open("file.txt")
+    try:
+        f.write("Hey")
+    except:
+        print("Something went wrong when writing this file")
+    finally:
+        f.close()
+except:
+    print("Something went wrong when opening this file")
