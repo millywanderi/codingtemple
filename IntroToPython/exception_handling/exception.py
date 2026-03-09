@@ -21,3 +21,11 @@ try:
     b = 10 / a
 except (ValueError, ZeroDivisionError) as e:
     print(f"An error has occured: {e}")
+
+# NameError
+try:
+    print(x)
+except NameError:
+    print("Variable x is not defined")
+except:
+    print("Something alse went wrong")
