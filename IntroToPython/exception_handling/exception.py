@@ -14,3 +14,10 @@ try:
     x = 10 / 0
 except ZeroDivisionError:
     print("You cannot divide by zero")
+
+# Catching Multiple Exceptions in one block
+try:
+    a = int(input("Enter your favorite number: "))
+    b = 10 / a
+except (ValueError, ZeroDivisionError) as e:
+    print(f"An error has occured: {e}")
