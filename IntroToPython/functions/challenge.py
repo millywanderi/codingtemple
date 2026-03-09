@@ -18,3 +18,16 @@ Call the function with the argument "Emil"
 def greet(name):
     print("Hello", name)
 greet("Emil")
+
+"""
+Create a function that takes a list of numbers as an argument, 
+squares each number, and returns a new list with the squared values.
+"""
+def myfunc(numbers):
+    results = []
+    for num in numbers:
+        results.append(num ** 2)
+    return results
+list_of_numbers = [3, 99, 12, 1, 7]
+final_result = myfunc(list_of_numbers)
+print(final_result)
