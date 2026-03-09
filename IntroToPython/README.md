@@ -8,3 +8,4 @@
 ## Conditional Logic in Python
 ## Python Loops: The Power of Repetition
 ## Function Mastery in Python
+## Safeguarding Your Code - Python Exception Handling
