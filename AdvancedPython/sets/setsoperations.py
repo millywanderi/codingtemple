@@ -20,3 +20,11 @@ set2 = {"Ann", "Job", "Kylie"}
 
 exclusive_guests = set1.difference(set2)
 print(exclusive_guests)
+
+# Symmetric Difference: Returns the items that are unique to each set
+#(not shared by both)
+set1 = {"Steve", "Millie", "Kylie"}
+set2 = {"Ann", "Job", "Kylie"}
+
+unique_guests = set1.symmetric_difference(set2)
+print(unique_guests)
