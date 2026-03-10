@@ -32,3 +32,16 @@ favorite_foods = {"pilau", "nyama choma", "mukimo", "chapati"}
 favorite_foods.add("ugali")
 print("ugali" in favorite_foods)
 print(favorite_foods)
+
+
+"""
+Exercise 4: Comparing Sets
+Create two sets of your favorite sports or hobbies.
+Check if one set is a subset of the other.
+Check if one set is a superset of the other.
+"""
+sports1 = {"handball", "valleyball"}
+sports2 = {"handball", "valleyball", "netball", "table tennis"}
+
+print(sports1.issubset(sports2))
+print(sports2.issuperset(sports1))
