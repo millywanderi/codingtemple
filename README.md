@@ -23,7 +23,6 @@ and string methods.
 * **Working with Python Integers.** Understand how to work with 
 integers in Python, perform basic arithmetic operations, 
 and apply integer-related functions.
-
 * **Exploring the Power of Lists in Python.** We created, manipulated, 
 and performed basic operations on Python lists.
 * **Conditional Logic in Python.** Create simple and complex 
@@ -44,3 +43,12 @@ understanding of Python's exception handling mechanisms, enabling us
 to write more robust and error-tolerant code. We learn how to identify
 and handle common exceptions using the try, except, else, and finally
 blocks, as well as how to raise predefined and custom exceptions.
+
+### Advanced Python
+*** Areas Covered
+* **Sets.** Sets are a special collection data type in Python, and they're useful for storing unique items. Here are some important characteristics:
+
+Unordered: You won’t know the order of elements.
+Mutable: You can change the set’s contents by adding or removing items.
+Unique: Sets automatically remove duplicate items.
+No Indexing: Unlike lists or tuples, sets don't have a defined order, so you can't access items using an index.
