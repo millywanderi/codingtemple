@@ -8,3 +8,8 @@ print(new_set)
 myfruits = ["apple", "apple", "banana", "mango"]
 fruits = set(myfruits)
 print(fruits)
+
+# Looping Over a Set
+fruits = {"apple", "banana", "mango"}
+for fruit in fruits:
+    print(fruit)
