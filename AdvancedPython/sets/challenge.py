@@ -16,7 +16,19 @@ print(hobbies)
 Create a set of your top 5 favorite books or movies.
 Write a for loop to print each item in the set.
 """
-favorite_movies = {"prison break", "broke girls", "in the middle",
-                   "beauty in black", "fatal seduction"}
+favorite_movies = {"Prison Break", "Broke Girls", "In the Middle",
+                   "Beauty in Black", "Fatal Seduction"}
 for movie in favorite_movies:
     print(movie)
+
+
+"""
+Exercise 3: Set Modification Practice
+Create a set of at least 4 of your favorite foods.
+Add one more food item to the set.
+Write code to check if a specific food item is in the set, then print the result.
+"""
+favorite_foods = {"pilau", "nyama choma", "mukimo", "chapati"}
+favorite_foods.add("ugali")
+print("ugali" in favorite_foods)
+print(favorite_foods)
