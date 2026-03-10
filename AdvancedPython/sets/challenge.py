@@ -10,3 +10,13 @@ favoritehobbies = ["coding", "travelling", "reading", "coding", "watching"]
 hobbies = set(favoritehobbies)
 print(favoritehobbies)
 print(hobbies)
+
+"""
+# Exercise 2: Loop Through a Set
+Create a set of your top 5 favorite books or movies.
+Write a for loop to print each item in the set.
+"""
+favorite_movies = {"prison break", "broke girls", "in the middle",
+                   "beauty in black", "fatal seduction"}
+for movie in favorite_movies:
+    print(movie)
