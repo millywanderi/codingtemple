@@ -13,3 +13,10 @@ set2 = {"Steve", "Millie","Jane", "Albert"}
 
 mutual_friends = set1.intersection(set2)
 print(mutual_friends)
+
+# Difference: Returns the items found in one set but not the other
+set1 = {"Steve", "Millie", "Kylie"}
+set2 = {"Ann", "Job", "Kylie"}
+
+exclusive_guests = set1.difference(set2)
+print(exclusive_guests)
