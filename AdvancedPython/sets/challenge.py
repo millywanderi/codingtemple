@@ -45,3 +45,18 @@ sports2 = {"handball", "valleyball", "netball", "table tennis"}
 
 print(sports1.issubset(sports2))
 print(sports2.issuperset(sports1))
+
+
+"""
+Exercise 5: Working with Set Operations
+Create two sets of your favorite vacation destinations.
+Use union to find all the unique destinations.
+Use intersection to find common destinations.
+Use difference to find destinations unique to one of your sets.
+"""
+set1 = {"Dubai", "Diani", "Malysia", "Georgia"}
+set2 = {"Georgia", "Maasai Mara", "Capetown"}
+
+print(set1.union(set2))
+print(set1.intersection(set2))
+print(set1.difference(set2))
