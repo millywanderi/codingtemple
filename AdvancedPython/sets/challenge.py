@@ -60,3 +60,33 @@ set2 = {"Georgia", "Maasai Mara", "Capetown"}
 print(set1.union(set2))
 print(set1.intersection(set2))
 print(set1.difference(set2))
+
+
+"""
+Final Challenge: Email List Deduplication
+You have two email lists, but some people may be in both. Write a function to:
+
+Remove duplicates.
+Show which emails exist in both lists.
+Show emails that are unique to each list.
+"""
+def clean_email_list(list1, list2):
+    set1 = set(list1)
+    set2 = set(list2)
+
+    # Remove duplicates
+    all_unique = set1.union(set2)
+    print("All unique emails:", all_unique)
+
+    # common emails
+    common_emails = set1.intersection(set2)
+    print("All common emails:", common_emails)
+
+    # email each unique list
+    unique_emails = set1.symmetric_difference(set2)
+    print("Emails unique to each list:", unique_emails)
+
+email_list1 = ["a@gmail.com", "b@gmail.com", "c@gmail.com", "a@gmail.com"]
+email_list2 = ["a@gmail.com", "d@gmail.com", "e@gmail.com"]
+
+clean_email_list(email_list1, email_list2)
