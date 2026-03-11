@@ -19,3 +19,7 @@ print(mytuple)
 # One item tuple, remember the comma
 mytuple = ("apple",)
 print(type(mytuple))
+
+# Using the tuple() method to make a tuple
+mytuple = tuple(["Steve", "Millie", "Kylie", "Lyle"])
+print(mytuple)
