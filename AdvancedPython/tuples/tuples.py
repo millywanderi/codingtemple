@@ -11,3 +11,7 @@ print(mytuple)
 # Print the number of items in the tuple
 mytuple = ("Steve", "Millie", "Kylie", "Lyle")
 print(len((mytuple)))
+
+# A tuple can contain different data types
+mytuple = (1, "Millie", 3.16, True)
+print(mytuple)
