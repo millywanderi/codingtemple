@@ -23,3 +23,8 @@ x = ("apple", "banana", "mango")
 y = list(x)
 y.remove("banana")
 print(tuple(y))
+
+# The del keyword can delete the tuple completely
+x = ("apple", "banana", "mango")
+del x
+print(x)
