@@ -11,3 +11,7 @@ print(mytuple[-1])
 # Return the third, fourth, and fifth item
 mytuple = (1, 2, 3, 4, 5, 6, 7, 8, 9)
 print(mytuple[2:5])
+
+# Range of Negative Indexes
+mytuple = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+print(mytuple[-4:-1])
