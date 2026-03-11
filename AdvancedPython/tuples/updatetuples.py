@@ -17,3 +17,9 @@ x = ("apple", "banana", "mango")
 y = ("kiwi",)
 x += y
 print(x)
+
+# Remove Items
+x = ("apple", "banana", "mango")
+y = list(x)
+y.remove("banana")
+print(tuple(y))
