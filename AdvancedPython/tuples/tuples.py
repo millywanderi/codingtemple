@@ -15,3 +15,7 @@ print(len((mytuple)))
 # A tuple can contain different data types
 mytuple = (1, "Millie", 3.16, True)
 print(mytuple)
+
+# One item tuple, remember the comma
+mytuple = ("apple",)
+print(type(mytuple))
