@@ -3,3 +3,7 @@
 # Create a simple tuple
 mytuple = ("Steve", "Millie", "Kylie", "Lyle")
 print(mytuple)
+
+# Tuples allow duplicate values
+mytuple = ("apple", "banana", "apple", "cherry")
+print(mytuple)
