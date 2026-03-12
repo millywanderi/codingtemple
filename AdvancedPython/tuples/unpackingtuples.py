@@ -21,3 +21,10 @@ red, yellow, *orange = fruits
 print(red)
 print(yellow)
 print(orange)
+
+# capture values from thefront to end of the tuple
+numbers = (1, 2, 3, 4, 5)
+first, *rest, last = numbers
+print(first)
+print(rest)
+print(last)
