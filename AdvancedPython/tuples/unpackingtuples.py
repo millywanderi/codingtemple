@@ -42,3 +42,9 @@ personal_info = ("Mary", 30, "Developer", "Louisville")
 name, _, _, city = personal_info
 print(name)
 print(city)
+
+# A function can return multiple values, packed into a tuple
+def get_user_info():
+    return "Mary", 30, "Developer", "Louisville"
+name, age, profession, city = get_user_info()
+print(city)
