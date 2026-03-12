@@ -35,3 +35,10 @@ red, *tropic, green = fruits
 print(red)
 print(tropic)
 print(green)
+
+# When unpacking, if you're not interested in one or more values, you 
+#can use an underscore _ as a placeholder to ignore those values
+personal_info = ("Mary", 30, "Developer", "Louisville")
+name, _, _, city = personal_info
+print(name)
+print(city)
