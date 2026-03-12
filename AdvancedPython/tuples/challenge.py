@@ -18,3 +18,19 @@ print("Last element:", mytuple[-1])
 
 mytuple.add("Mary")
 print(mytuple)
+
+
+"""
+Test your understanding of creating, accessing, and unpacking tuples
+Create a tuple called fruits with the values "apple", "banana", "cherry"
+Print the second item in the tuple
+Print the number of items using len()
+Unpack the tuple into three variables a, b, c
+Print the variable b
+"""
+fruits = ("apple", "banana", "cherry")
+print(fruits[1])
+print(len(fruits))
+
+a, b, c = fruits
+print(b)
