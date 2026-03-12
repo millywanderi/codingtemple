@@ -28,3 +28,10 @@ first, *rest, last = numbers
 print(first)
 print(rest)
 print(last)
+
+# Add a list of values the "tropic" variable
+fruits = ("apple", "banana", "cherry", "kiwi", "mango")
+red, *tropic, green = fruits
+print(red)
+print(tropic)
+print(green)
