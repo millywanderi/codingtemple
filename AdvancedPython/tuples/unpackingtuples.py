@@ -48,3 +48,10 @@ def get_user_info():
     return "Mary", 30, "Developer", "Louisville"
 name, age, profession, city = get_user_info()
 print(city)
+
+# Passing Multiple Values with Unpacking
+def display_info(name, age, profession):
+    print(f"{name} is {age} years old and work as a {profession}")
+
+info_tuple = ("Mary", 30, "Developer")
+display_info(*info_tuple)
