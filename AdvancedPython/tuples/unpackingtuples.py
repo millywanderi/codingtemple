@@ -12,3 +12,12 @@ name, age, profession = personal_info
 print(name)
 print(age)
 print(profession)
+
+# If the number of variables is less than the number of values, you 
+#can add an * to the variable name and the values will be assigned to
+#the variable as a list
+fruits = ("apple", "banana", "cherry", "kiwi", "mango")
+red, yellow, *orange = fruits
+print(red)
+print(yellow)
+print(orange)
