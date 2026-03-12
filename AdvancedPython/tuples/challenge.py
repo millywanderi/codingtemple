@@ -15,3 +15,6 @@ of tuples.
 mytuple = (1, "Tom", True, 3.14)
 print("First element:", mytuple[0])
 print("Last element:", mytuple[-1])
+
+mytuple.add("Mary")
+print(mytuple)
