@@ -15,3 +15,12 @@ my_dict = {
         "year": 1964
 }
 print(my_dict["brand"])
+
+# Duplicate values will overwrite existing values
+my_dict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964,
+    "year": 2008
+}
+print(my_dict)
