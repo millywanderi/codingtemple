@@ -28,3 +28,11 @@ x = car.keys()
 print(x)
 car["color"] = "blue"
 print(x)
+
+# Get a list of the values
+car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+print(car.values())
