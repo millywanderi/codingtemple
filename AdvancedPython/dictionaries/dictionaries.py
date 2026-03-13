@@ -41,3 +41,11 @@ my_dict = {
     "colors": ["red", "white", "black", "grey"]
 }
 print(my_dict)
+
+# Print the data type of a dictionary
+my_dict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 2008
+}
+print(type(my_dict))
