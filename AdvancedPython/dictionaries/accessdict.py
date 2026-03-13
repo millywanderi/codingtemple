@@ -48,3 +48,11 @@ x = car.values()
 print(x)
 car["color"] = "red"
 print(x)
+
+# Get a list of the key:value pairs
+car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+print(car.items())
