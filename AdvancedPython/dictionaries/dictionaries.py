@@ -32,3 +32,12 @@ my_dict = {
     "year": 2008
 }
 print(len(my_dict))
+
+# The values in dictionary items can be of any data type
+my_dict = {
+    "brand": "Ford",
+    "electric": False,
+    "year": 2008,
+    "colors": ["red", "white", "black", "grey"]
+}
+print(my_dict)
