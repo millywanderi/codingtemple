@@ -24,3 +24,11 @@ my_dict = {
     "year": 2008
 }
 print(my_dict)
+
+# Print the number of items in the dictionary
+my_dict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 2008
+}
+print(len(my_dict))
