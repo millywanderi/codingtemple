@@ -56,3 +56,12 @@ car = {
     "year": 1964
 }
 print(car.items())
+
+# Check if "model" is present in the dictionary
+car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+if "model" in car:
+    print("Yes, 'model' is one of the keys in car")
