@@ -49,3 +49,7 @@ my_dict = {
     "year": 2008
 }
 print(type(my_dict))
+
+# Using the dict() method to make a dictionary
+my_dict = dict(name = "Kylie", age = 10, city = "Nairobi")
+print(my_dict)
