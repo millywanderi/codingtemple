@@ -19,3 +19,13 @@ mydict = {
 }
 mydict.popitem()
 print(mydict)
+
+# The del keyword removes the item with the specified key name
+mydict = {
+    "name": "Kylie",
+    "age": 10,
+    "school": "Precious Brooks",
+    "brother": "Lyle"
+}
+del mydict["school"]
+print(mydict)
