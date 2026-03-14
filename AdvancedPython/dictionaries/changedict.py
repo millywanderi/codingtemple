@@ -8,3 +8,12 @@ my_dict = {
 }
 my_dict["school"] = "Karamani Baptist"
 print(my_dict)
+
+# Update Dictionary
+my_dict = {
+    "name": "Kylie",
+    "age": 10,
+    "school": "Precious Brooks"
+}
+my_dict.update({"name": "Kinsley"})
+print(my_dict)
