@@ -9,3 +9,12 @@ my_dict = {
 }
 my_dict["brother"] = "Lyle"
 print(my_dict)
+
+# Use update() to add an item to the dictionary
+car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1970
+}
+car.update({"color": "blue"})
+print(car)
