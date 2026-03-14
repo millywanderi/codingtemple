@@ -8,3 +8,12 @@ mydict = {
 }
 thisdict = mydict.copy()
 print(thisdict)
+
+# Make a copy of a dictionary with the dict() function
+car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1960
+}
+mycar = dict(car)
+print(mycar)
