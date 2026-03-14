@@ -29,3 +29,12 @@ mydict = {
 }
 del mydict["school"]
 print(mydict)
+
+# The clear() method empties the dictionary
+mydict = {
+    "name": "Kylie",
+    "age": 10,
+    "city": "Nairobi"
+}
+mydict.clear()
+print(mydict)
