@@ -11,4 +11,7 @@ for x in car:
     print(car[x]) # Print all values in the dictionary, one by one
 
 for x in car.values():
-    print(x)
+    print(x) # return values of a dictionary
+
+for x in car.keys():
+    print(x) # return the keys of a dictionary
