@@ -9,3 +9,13 @@ mydict = {
 }
 mydict.pop("brother")
 print(mydict)
+
+# The popitem() method removes the last inserted item
+mydict = {
+    "name": "Kylie",
+    "age": 10,
+    "school": "Precious Brooks",
+    "brother": "Lyle"
+}
+mydict.popitem()
+print(mydict)
