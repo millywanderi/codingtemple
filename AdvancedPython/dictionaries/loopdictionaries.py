@@ -15,3 +15,6 @@ for x in car.values():
 
 for x in car.keys():
     print(x) # return the keys of a dictionary
+
+for x, y  in car.items():
+    print(x, y) # Loop through both keys and values
