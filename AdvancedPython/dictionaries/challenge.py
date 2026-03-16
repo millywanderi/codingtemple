@@ -33,6 +33,30 @@ car = {
     "model": "Mustang",
     "year": 2024
 }
-car.update({"color": "red"})
+print(car["model"])
+car["color"] = "red"
 car.pop("brand")
 print(car)
+
+
+"""
+Final Challenge: Student Grade Program
+Challenge: Write a program that takes a dictionary of students and 
+their grades, then prints each student's name and whether they passed
+or failed (consider passing as a grade ≥ 50).
+
+This challenge aims to reinforce iteration through a dictionary and 
+using conditional logic to determine outcomes based on data stored 
+within.
+"""
+students = {
+    "Ann": 60,
+    "John": 34,
+    "Stacy": 53,
+    "Kimberly": 50
+}
+for student, grade in students.items():
+    if grade >= 50:
+        print(f"{student} passed.")
+    else:
+        print(f"{student} failed.")
