@@ -2,3 +2,4 @@
 ## We covered the following areas
 # Sets
 # Tuples
+# Dictionaries
