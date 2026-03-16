@@ -18,3 +18,21 @@ book = {
 book.update({"publisher": "KLB"})
 book.update({"year": 2020})
 print(book)
+
+
+"""
+Create a dictionary called car with the keys "brand", "model", "year"
+and values "Ford", "Mustang", 2024
+Print the value of the "model" key
+Add a new key "color" with the value "red"
+Remove the "brand" key using pop()
+Print the dictionary
+"""
+car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 2024
+}
+car.update({"color": "red"})
+car.pop("brand")
+print(car)
