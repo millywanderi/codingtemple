@@ -52,8 +52,17 @@ Unordered: You won’t know the order of elements.
 Mutable: You can change the set’s contents by adding or removing items.
 Unique: Sets automatically remove duplicate items.
 No Indexing: Unlike lists or tuples, sets don't have a defined order, so you can't access items using an index.
-* **Tuples.**We learnt that  tuples are a type of data structure that
+* **Tuples.** We learnt that  tuples are a type of data structure that
 allow you to store multiple items in a single variable, similar to 
 lists. However, there's a key difference that makes tuples unique: 
 tuples are immutable, meaning once they are created, their values 
 cannot be changed.
+* **Dictionaries.** Python dictionaries are a versatile data structure
+used to store data in key-value pairs. They allow you to organize and
+access data efficiently, much like a real-world dictionary, where you
+can quickly look up information using a key (which can be various data
+types, such as strings, numbers, or tuples). In Python, dictionaries 
+are especially useful for associating data with unique identifiers, 
+making them great for scenarios like looking up user profiles by 
+username, storing configuration settings, or managing inventory by 
+product ID.
