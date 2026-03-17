@@ -6,3 +6,12 @@ import re
 txt = "The rain in Spain"
 x = re.split(r"\s", txt)
 print(x)
+
+"""
+split a string based on various delimiters such as commas, semicolons
+, spaces, periods, and hyphens.split a string based on various 
+delimiters such as commas, semicolons, spaces, periods, and hyphens.
+"""
+txt = "Python,Regex;Splitting-Example. Fun, right?"
+words = re.split(r"[,.;\s-]+", txt)
+print(words)
