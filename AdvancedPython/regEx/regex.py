@@ -15,3 +15,8 @@ txt = "My name is Millie, and I like coding and reading"
 ands = re.findall("and", txt)
 print(ands)
 print(len(ands))
+
+# Return an empty list if no match was found
+txt = "My name is Millicent, and I come from Kenya"
+x = re.findall("Uganda", txt)
+print(x)
