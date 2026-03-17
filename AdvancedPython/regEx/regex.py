@@ -20,3 +20,8 @@ print(len(ands))
 txt = "My name is Millicent, and I come from Kenya"
 x = re.findall("Uganda", txt)
 print(x)
+
+# Extracting Hashtags
+post = "I LOVE # learning #Python_is_life and #Regex, this is fun! #code"
+tags = re.findall("#\w+", post)
+print(tags)
