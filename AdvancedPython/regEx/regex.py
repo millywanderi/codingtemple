@@ -9,3 +9,9 @@ if x:
     print("Yes! We have a match")
 else:
     print("No match")
+
+# The findall() function returns a list containing all matches
+txt = "My name is Millie, and I like coding and reading"
+ands = re.findall("and", txt)
+print(ands)
+print(len(ands))
