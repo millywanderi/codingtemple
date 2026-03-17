@@ -25,3 +25,8 @@ print(x)
 post = "I LOVE # learning #Python_is_life and #Regex, this is fun! #code"
 tags = re.findall("#\w+", post)
 print(tags)
+
+# Search for the first white-space character in the string
+txt = "The rain in Spain"
+x = re.search("\s", txt)
+print("The first white-space character is located in position:", x.start())
