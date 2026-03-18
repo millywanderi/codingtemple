@@ -15,3 +15,14 @@ print(x)
 number = "(254) 710-507710"
 formatted_number = re.sub(r"\D", '', number)
 print(formatted_number)
+
+# Anonymizing Chat User Mentions
+chat = '''
+@bree: "I think I love Regex"
+@Chloe: "Aren't you married?"
+@Yvone123: "It's not just the same"
+@Peter: "They better not see this"
+'''
+
+anon_chat = re.sub(r"@[\w-]+", "@user-anon", chat)
+print(anon_chat)
