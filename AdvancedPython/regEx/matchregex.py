@@ -16,3 +16,11 @@ print(x.span())
 txt = "The rain in Spain"
 x = re.search(r"\bS\w+", txt)
 print(x.string)
+
+# verify if a URL begins with "https", indicating that it is secure
+url = "https://looks.com"
+secure = re.match(r"https", url)
+if secure:
+    print("This link directs to a secure website!")
+else:
+    print("Secure your website!")
