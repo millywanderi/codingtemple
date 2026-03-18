@@ -16,3 +16,8 @@ f.close()
 # Return the 5 first characters of the file
 f = open("demofile.txt")
 print(f.read(5))
+
+# Loop through the file line by line
+with open("demofile.txt") as f:
+    for x in f:
+        print(x)
