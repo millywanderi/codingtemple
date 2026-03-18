@@ -7,3 +7,8 @@ print(f.read())
 # Using the with keyword
 with open("demofile.txt") as f:
     print(f.read())
+
+# Close the file when you are finished with it
+f = open("demofile.txt")
+print(f.readline())
+f.close()
