@@ -12,3 +12,13 @@ tags = []
 for tweet in tweets:
     tags.extend(re.findall(r"#\w+", tweet))
 print(tags)
+
+
+"""
+Create a variable txt with the value "The rain in Spain"
+Search for "Spain" in txt and store the result in x
+Print the position (span) of the match
+"""
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.span())
