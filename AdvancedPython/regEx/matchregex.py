@@ -11,3 +11,8 @@ print(x)
 #upper case "S"
 x = re.search(r"\bS\w+", txt)
 print(x.span())
+
+# Print the string passed into the function
+txt = "The rain in Spain"
+x = re.search(r"\bS\w+", txt)
+print(x.string)
