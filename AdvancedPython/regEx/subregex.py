@@ -10,3 +10,8 @@ print(x)
 # Replace the first 2 occurrences
 x = re.sub(r"\s", "9", txt, 2)
 print(x)
+
+# Formatting Phone Numbers
+number = "(254) 710-507710"
+formatted_number = re.sub(r"\D", '', number)
+print(formatted_number)
