@@ -12,3 +12,7 @@ with open("demofile.txt") as f:
 f = open("demofile.txt")
 print(f.readline())
 f.close()
+
+# Return the 5 first characters of the file
+f = open("demofile.txt")
+print(f.read(5))
