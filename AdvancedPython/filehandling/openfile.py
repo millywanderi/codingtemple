@@ -3,3 +3,7 @@
 # open and read a file
 f = open("demofile.txt")
 print(f.read())
+
+# Using the with keyword
+with open("demofile.txt") as f:
+    print(f.read())
