@@ -17,3 +17,13 @@ def add_show(shows):
     genre = input("What is the genre? ")
     shows.append({'Title': title, 'Platform': platform, 'Genre': genre})
     write_show(shows)
+
+# Function to read TV shows from a file
+def read_shows():
+    show_list = []
+    with open("show_list.txt", "r") as file:
+        for line in file:
+            data = re.search(r"([\w\s]+)-:-([\w\s]+)-:-([\w\s]+)", line)
+            show_list.append({'Title': data.group(1), 'Platform': data.group(2),
+'Genre': data.group(3)})
+    return show_list
