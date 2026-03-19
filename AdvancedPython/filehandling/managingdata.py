@@ -27,3 +27,13 @@ def read_shows():
             show_list.append({'Title': data.group(1), 'Platform': data.group(2),
 'Genre': data.group(3)})
     return show_list
+
+# Function to print the list of shows for the user in a formatted way
+def view(shows):
+    print("Shows Lists")
+    print("-----------------------")
+    for idx, show in enumerate(shows):
+        vowels = ["a", "e", "i", "o", "u"]
+        a_or_an = "an" if show['Genre'][0].lower() in vowels else 'a'
+        print(f"{idx + 1}.{show['Title']} is {a_or_an} {show['Genre']} show on {show['Platform']}")
+
