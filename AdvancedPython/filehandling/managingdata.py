@@ -45,3 +45,26 @@ def remove_shows(shows):
     show = shows.pop(option - 1)
     print(f"\n{show['Title']} was successfully removed!")
     write_show(shows)
+
+# Main function to run the TV show manager
+def main():
+    while True:
+        show_list = read_shows()
+        action = input("""
+        Options
+        ----------------------
+        1 - Add a TV Show
+        2 - Remove a TV Show
+        3 - View List of TV Shows
+        4 - Quit
+        """)
+
+        if action == "1":
+            add_show(show_list)
+        elif action == "2":
+            remove_show(show_list)
+        elif action == "3":
+            view(show_list)
+        elif action == "4":
+            break
+main()
