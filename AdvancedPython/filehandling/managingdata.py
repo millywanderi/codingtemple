@@ -37,3 +37,11 @@ def view(shows):
         a_or_an = "an" if show['Genre'][0].lower() in vowels else 'a'
         print(f"{idx + 1}.{show['Title']} is {a_or_an} {show['Genre']} show on {show['Platform']}")
 
+# Function to show our current list of shows and allow the user to 
+#choose which to remove
+def remove_shows(shows):
+    view(shows)
+    option = int(input("\n\nChoose a number for the show you'd like to remove: "))
+    show = shows.pop(option - 1)
+    print(f"\n{show['Title']} was successfully removed!")
+    write_show(shows)
