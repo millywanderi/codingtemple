@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+# Open the file "demofile.txt" and append content to the file
+with open("demofile.txt", "a") as f:
+    f.write("Now the file has new content")
+
+with open("demofile.txt") as f:
+    print(f.read())
