@@ -6,3 +6,10 @@ with open("demofile.txt", "a") as f:
 
 with open("demofile.txt") as f:
     print(f.read())
+
+# Open the file "demofile.txt" and overwrite the content
+with open("demofile.txt", "w") as f:
+    f.write("Oops! I have deleted the content")
+
+with open("demofile.txt") as f:
+    print(f.read())
