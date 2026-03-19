@@ -10,3 +10,6 @@ if os.path.exists("call.txt"):
     os.remove("call.txt")
 else:
     print("The file does not exist")
+
+# Remove the folder "call"
+os.rmdir("call")
