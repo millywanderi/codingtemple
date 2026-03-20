@@ -77,3 +77,50 @@ class Person:
 person = Person("Kylie", 10)
 print(person.greet())
 print(person.have_birthday())
+
+
+"""
+Final Challenge
+Challenge: Create a BankAccount Class
+Objective: Reinforce the concepts of instance attributes, the __init__ method, and instance methods.
+Instructions:
+Create a class named BankAccount with the following:
+Instance attributes:
+account_holder (string): The name of the account holder.
+balance (float): The current account balance, defaulting to 0.
+Methods:
+deposit(amount): Adds the given amount to the account balance and 
+returns a message showing the new balance. withdraw(amount): Subtracts
+the given amount from the balance if there are sufficient funds. 
+Otherwise, it should return a message saying "Insufficient funds." 
+If the withdrawal is successful, it should return the new balance.
+get_balance(): Returns a message displaying the current account balance.
+"""
+class BankAccount:
+    def __init__(self, account_holder, balance=0):
+        self.account_holder = account_holder
+        self.balance = balance
+
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.balance += amount
+            return f"Deposited ${amount}.Your new balance is ${self.balance}"
+
+
+    def withdraw(self, amount):
+        if 0 < amount <= self.balance:
+            self.balance -= amount
+            return f"Withdrew ${amount}. Your new balance is ${self.balance}"
+        else:
+            return f"Insufficient funds"
+
+    def get_balance(self):
+        return f"Your current balance is ${self.balance}"
+
+account = BankAccount("Kylie", 1000)
+
+print(account.get_balance())
+print(account.deposit(500))
+print(account.withdraw(200))
+print(account.withdraw(2000))
