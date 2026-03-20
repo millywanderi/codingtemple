@@ -25,3 +25,25 @@ p2 = Person("Kylie", 10)
 
 print(p1.name, p1.age)
 print(p2.name, p2.age)
+
+# basic example to understand instance methods
+class Car:
+    def __init__(self, make, model, mileage=0):
+        self.make = make
+        self.model = model
+        self.mileage = mileage
+
+    
+    # Instance method to display car information
+    def display_info(self):
+        return f"{self.make} {self.model}, Mileage: {self.mileage} miles"
+
+
+    # Instance method to update the mileage
+    def drive(self, miles):
+        self.mileage += miles
+        return f"Drove {miles} miles. Total mileage is now {self.mileage} miles."
+# Creating an instance of the Car class
+mycar = Car("Toyota", "Corolla", 10000)
+print(mycar.display_info())
+print(mycar.drive(150))
