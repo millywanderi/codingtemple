@@ -46,3 +46,34 @@ class Car:
         print(self.brand)
 c1 = Car("Ford")
 c1.show()
+
+
+"""
+Engage & Apply: Mid Lesson Exercise
+Exercise: Create a Person Class
+Objective: Apply the concepts of classes, attributes, and instance methods.
+Instructions:
+Create a class named Person with:
+Instance attributes name (string) and age (integer).
+Add two instance methods:
+greet(): This method should return a greeting message that includes the person's name.
+have_birthday(): This method should increase the person's age by one 
+and return a message that says, "Happy Birthday! You are now [age] years old."
+"""
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+    def greet(self):
+        return f"Hello, {self.name}!"
+
+
+    def have_birthday(self):
+        self.age += 1
+        return f"Happy Birthday! You are now {self.age} years old"
+
+person = Person("Kylie", 10)
+print(person.greet())
+print(person.have_birthday())
