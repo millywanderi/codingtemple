@@ -12,10 +12,16 @@ car1 = Car("Toyota", "Corolla", 2009)
 car2 = Car("Honda", "Civic", 2010)
 
 # Accessing instance attributes
-print(car1.make)
-print(car1.model)
-print(car1.year)
+print(car1.make, car1.model, car1.year)
+print(car2.make, car2.model, car2.year)
 
-print(car2.make)
-print(car2.model)
-print(car2.year)
+# Set a default value for the age parameter
+class Person:
+    def __init__(self, name, age=18):
+        self.name = name
+        self.age = age
+p1 = Person("Millie")
+p2 = Person("Kylie", 10)
+
+print(p1.name, p1.age)
+print(p2.name, p2.age)
