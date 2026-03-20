@@ -87,3 +87,9 @@ useful in situations such as data validation, web scraping, and
 parsing large volumes of data for specific formats, like email 
 addresses or phone numbers. Regex can significantly simplify complex 
 string operations, helping developers work smarter and more efficiently.
+
+* **File Handling.** We learnt learn the fundamentals of Python file 
+handling—how to open, read, write, and append to files. I also explored
+how to manage structured data, such as lists, dictionaries, and custom
+data formats, using files. By the end, I was be able to build a simple
+program that interacts with files to store and retrieve data interactively.
