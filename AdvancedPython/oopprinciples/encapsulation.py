@@ -41,3 +41,27 @@ class Person:
 
 p1 = Person("John", 12)
 print(p1.get_age())
+
+# Example of Private Attributes (Social Media Profile)
+class SocialMediaProfile:
+    def __init__(self, username, email, password):
+        self.username = username
+        self.__email = email
+        self.__password = password
+
+
+    def verify_password(self, input_password):
+        if input_password == self.__password:
+            return "Password Verified"
+        else:
+            return "Invalid Password"
+
+
+    def get_email(self, input_password):
+        if input_password == self.__password:
+            return self.__email
+        else:
+            return "Access Denied"
+
+profile = SocialMediaProfile("user123", "user@gmail.com", "securepassword")
+print(profile.get_email("securepassword"))
