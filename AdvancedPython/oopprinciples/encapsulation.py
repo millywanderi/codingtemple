@@ -28,3 +28,16 @@ class SavingsAccount(BankAccount):
 savings = SavingsAccount("Bob", 2000)
 savings.add_interest(0.05)
 print(savings.get_balance())
+
+# Create a private class property named __age
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.__age = age
+
+
+    def get_age(self):
+        return self.__age
+
+p1 = Person("John", 12)
+print(p1.get_age())
