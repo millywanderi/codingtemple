@@ -78,3 +78,25 @@ tracker.add_calories(300)
 print(f"steps: {tracker.get_steps()}")
 print(f"calories: {tracker.get_calories_burned()}")
 tracker.reset_tracker()
+
+
+"""
+Create a parent class Animal with an __init__ that takes name
+Add a method speak that prints the name
+Create a child class Dog that inherits from Animal
+Create an object d1 = Dog("Rex")
+Call d1.speak()
+"""
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+
+    def speak(self):
+        print(self.name)
+
+
+class Dog(Animal):
+    pass
+d1 = Dog("Rex")
+d1.speak()
