@@ -104,3 +104,11 @@ created from them.
 * **OOP Principles.** We fully explore the four key principles of 
 Object-Oriented Programming (OOP): Encapsulation, Abstraction, 
 Inheritance, and Polymorphism.
+
+* **OOP Advanced.** We dived into advanced object-oriented programming
+concepts, focusing on the various types of methods that a class can 
+define. Specifically, we explored:
+
+Special methods, also called magic or dunder methods (__repr__ & __str__)
+Class methods (@classmethod)
+Static methods (@staticmethod)
