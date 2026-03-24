@@ -5,3 +5,5 @@
 # Dictionaries
 # RegEx
 # File Handling
+# 
+# OOP Principles
