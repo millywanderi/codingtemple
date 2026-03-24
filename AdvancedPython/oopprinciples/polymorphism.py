@@ -144,3 +144,24 @@ publish_post(default_user)
 publish_post(user1)
 publish_post(user2)
 publish_post(user3)
+
+# Python allows classes to inherit from more than one class, which
+#is known as multiple inheritance
+class Flyer:
+    def fly(self):
+        print("Flying Higher!")
+
+
+class Swimmer:
+    def swim(self):
+        print("Swimming Fast!")
+
+
+class Duck(Flyer, Swimmer):
+    def quack(self):
+        print("Quack!")
+
+duck = Duck()
+duck.fly()
+duck.swim()
+duck.quack()
