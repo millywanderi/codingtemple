@@ -26,3 +26,36 @@ p = Product("Laptop", 999.99, 5)
 print(repr(p))
 
 print(p)
+
+"""
+Example: Managing a Fleet of Cars
+
+Consider a Car class where the company wants to track the total number
+of cars produced and also offer alternative ways to create cars, such
+as importing car data from a CSV file. We’ll use class methods to 
+manage these operations.
+"""
+class Car:
+    total_cars = 0
+
+    def __init__(self, model, year):
+        self.model = model
+        self.year = year
+        Car.total_cars += 1
+
+
+    @classmethod
+    def from_csv(cls, csv_data):
+        model, year = csv_data.split(",")
+        return cls(model, int(year))
+
+
+    @classmethod
+    def total_produced(cls):
+        return cls.total_cars
+
+
+car1 = Car("Toyota Corolla", 2020)
+car2 = Car.from_csv("Honda Accord,2018")
+
+print(Car.total_produced())
