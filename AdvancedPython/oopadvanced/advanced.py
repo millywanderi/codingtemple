@@ -59,3 +59,37 @@ car1 = Car("Toyota Corolla", 2020)
 car2 = Car.from_csv("Honda Accord,2018")
 
 print(Car.total_produced())
+
+"""
+Example: Utility Method for Temperature Conversion
+
+Suppose we have a WeatherStation class that tracks temperatures. A 
+static method can be used to convert between Fahrenheit and Celsius, 
+which is useful across different parts of the system but doesn't depend
+on the WeatherStation itself.
+"""
+class WeatherStation:
+    def __init__(self, location, temperature_f):
+        self.location = location
+        self.temperature_f = temperature_f
+
+
+    def __repr__(self):
+        return f"WeatherStation(location={self.location}, temperature_={self.temperature_f})"
+
+
+    @staticmethod
+    def fahrenheit_to_celcius(f_temp):
+        return (f_temp - 32) * 5.0/9.0
+
+
+    @staticmethod
+    def celcius_to_fahrenheit(c_temp):
+        return (c_temp * 9.0/5.0) + 32
+
+temp_f = 77
+temp_c = WeatherStation.celcius_to_fahrenheit(temp_f)
+print(f"{temp_f}F is {temp_c:.2f}C")
+
+temp_back_f = WeatherStation.celcius_to_fahrenheit(temp_c)
+print(f"{temp_c:.2f}C is {temp_back_f:.2f}F")
