@@ -93,3 +93,10 @@ handling—how to open, read, write, and append to files. I also explored
 how to manage structured data, such as lists, dictionaries, and custom
 data formats, using files. By the end, I was be able to build a simple
 program that interacts with files to store and retrieve data interactively.
+
+* **Object Oriented Programming Fundamentals.** Object-Oriented 
+Programming (OOP) is a programming paradigm based on the concept of 
+"objects," which can contain both data (attributes) and methods 
+(functions). It focuses on organizing code into reusable blueprints 
+called classes, which define the structure and behavior of the objects 
+created from them.
