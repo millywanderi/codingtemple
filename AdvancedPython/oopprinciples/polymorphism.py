@@ -109,3 +109,38 @@ archer = Archer()
 perform_attack(warrior)
 perform_attack(mage)
 perform_attack(archer)
+
+# Polymorphism in a Social Media Platform
+class User:
+    def post_content(self):
+        print("Posting generic content.")
+
+
+class RegularUser(User):
+    def post_content(self):
+        print("Posting a photo as a regular user.")
+
+
+class Influencer(User):
+    def post_content(self):
+        print("Posting a sponsored video as an influencer.")
+
+
+class Brand(User):
+    def post_content(self):
+        print("Posting an ad as a brand.")
+
+
+def publish_post(user):
+    user.post_content()
+
+
+default_user = User()
+user1 = RegularUser()
+user2 = Influencer()
+user3 = Brand()
+
+publish_post(default_user)
+publish_post(user1)
+publish_post(user2)
+publish_post(user3)
