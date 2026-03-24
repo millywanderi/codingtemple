@@ -100,3 +100,7 @@ Programming (OOP) is a programming paradigm based on the concept of
 (functions). It focuses on organizing code into reusable blueprints 
 called classes, which define the structure and behavior of the objects 
 created from them.
+
+* **OOP Principles.** We fully explore the four key principles of 
+Object-Oriented Programming (OOP): Encapsulation, Abstraction, 
+Inheritance, and Polymorphism.
