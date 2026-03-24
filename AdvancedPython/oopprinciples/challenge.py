@@ -100,3 +100,26 @@ class Dog(Animal):
     pass
 d1 = Dog("Rex")
 d1.speak()
+
+
+"""
+Create a class Cat with a method sound that prints "Meow"
+Create a class Fox with a method sound that prints "Wa-pa-pa-pa-pa-pow!"
+Create objects c1 = Cat() and f1 = Fox()
+Call sound() on both objects
+"""
+class Cat:
+    def sound(self):
+        print("Meow")
+
+
+class Fox:
+    def sound(self):
+        print("Wa-pa-pa-pa-pa-pow!")
+
+
+c1 = Cat()
+f1 = Fox()
+
+c1.sound()
+f1.sound()
