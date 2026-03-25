@@ -14,6 +14,9 @@ ALTER TABLE users ADD IF NOT EXISTS last_login TIMESTAMP;
 
 ALTER TABLE users MODIFY COLUMN email VARCHAR(150) NOT NULL;
 
+-- Delete entire table
+DROP TABLE users;
+
 INSERT INTO users(username, email)
 VALUES
 ('kylie', 'kylie@gmail.com'),
