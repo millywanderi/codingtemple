@@ -10,7 +10,9 @@ CREATE TABLE IF NOT EXISTS users(
 );
 
 -- Add new column
-ALTER TABLE users ADD last_login TIMESTAMP;
+ALTER TABLE users ADD IF NOT EXISTS last_login TIMESTAMP;
+
+ALTER TABLE users MODIFY COLUMN email VARCHAR(150) NOT NULL;
 
 INSERT INTO users(username, email)
 VALUES
