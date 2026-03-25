@@ -9,6 +9,9 @@ CREATE TABLE IF NOT EXISTS users(
     PRIMARY KEY (user_id)
 );
 
+-- Add new column
+ALTER TABLE users ADD last_login TIMESTAMP;
+
 INSERT INTO users(username, email)
 VALUES
 ('kylie', 'kylie@gmail.com'),
