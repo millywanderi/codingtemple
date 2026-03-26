@@ -29,3 +29,29 @@ VALUES ("The Great Gatsby", "F. Scott Fitzgerald", 1925, "Fiction"),
 
 UPDATE books SET genre = "Political Fiction" WHERE title = "1984";
 DELETE FROM books WHERE title = "The Great Gatsby";
+
+
+"""
+Use what you've learned to build and manipulate a database for an online store.
+Tasks:
+Create a customers table with columns for customer_id, name, email, and address.
+Insert three customers into the table.
+Query for all customers with an email ending in @gmail.com.
+Update the address of one of the customers.
+Delete one customer record.
+"""
+CREATE TABLE customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    address VARCHAR(200)
+);
+
+INSERT INTO customers(name, email, address)
+VALUES ("Mary", "mary@gmail.com", "11 Street Maple"),
+       ("John", "John@example.com", "12 Street Maple"),
+       ("Ken", "ken@gmail.com", "13 Street Maple");
+
+SELECT * FROM customers
+UPDATE customers SET address = "12 MAPLE" WHERE customer_id = 1;
+DELETE FROM customers WHERE customer_id = 3;
