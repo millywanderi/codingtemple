@@ -18,4 +18,5 @@ ALTER TABLE userinfo MODIFY COLUMN email VARCHAR(150) NOT NULL;
 INSERT INTO userinfo(username, email)
 VALUES ("kylie_kinsley", "kylie@example.com");
 
-
+-- Update the table
+UPDATE userinfo SET email = "kinsley@eample.com" WHERE user_id = 1;
