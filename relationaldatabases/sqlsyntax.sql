@@ -1,5 +1,6 @@
 -- create a database
-CREATE DATABASE IF NOT EXISTS myuserdatabase;
+DROP DATABASE IF EXISTS myuserdatabase;
+CREATE DATABASE myuserdatabase;
 USE myuserdatabase;
 
 -- Create a table
