@@ -1,4 +1,4 @@
-CREATE DATABASE myusers;
+CREATE DATABASE IF NOT EXISTS myusers;
 USE myusers;
 
 -- Created users table
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS products (
 
 -- Order table
 CREATE TABLE IF NOT EXISTS orders (
-    orrder_id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
     product_id INT,
     FOREIGN KEY (user_id) REFERENCES users(user_id),
