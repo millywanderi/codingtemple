@@ -9,3 +9,7 @@ CREATE TABLE IF NOT EXISTS userinfo (
     email VARCHAR(100) NOT NULL,
     create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Modify the table and column
+ALTER TABLE userinfo ADD last_login TIMESTAMP;
+ALTER TABLE userinfo MODIFY COLUMN email VARCHAR(150) NOT NULL;
