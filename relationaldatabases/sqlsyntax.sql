@@ -13,3 +13,9 @@ CREATE TABLE IF NOT EXISTS userinfo (
 -- Modify the table and column
 ALTER TABLE userinfo ADD last_login TIMESTAMP;
 ALTER TABLE userinfo MODIFY COLUMN email VARCHAR(150) NOT NULL;
+
+-- Add new rows in the table
+INSERT INTO userinfo(username, email)
+VALUES ("kylie_kinsley", "kylie@example.com");
+
+
