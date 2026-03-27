@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from sqlalchemy import create_engine, String
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, Session
 
 # create engine
 engine = create_engine('mysql+mysqlconnector://millie:ciku2015@127.0.0.1:3306/intro_orm')
@@ -19,3 +19,9 @@ class User(Base):
 
 
 Base.metadata.create_all(engine)
+
+# Insert data into the table
+session = Session(engine)
+new_user = User(name="John", email="john@example.com")
+session.add(new_user)
+session.commit()
