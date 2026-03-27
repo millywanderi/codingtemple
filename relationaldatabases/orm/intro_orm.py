@@ -39,3 +39,8 @@ users = session.execute(query).scalars().all()
 
 for user in users:
     print(user.name, user.email)
+
+#  Filter Data (SQL WHERE)
+query = select(User).where(user.name == "John")
+user = session.execute(query).scalars().first()
+print(user.name)
