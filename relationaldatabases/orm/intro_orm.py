@@ -44,3 +44,9 @@ for user in users:
 query = select(User).where(user.name == "John")
 user = session.execute(query).scalars().first()
 print(user.name)
+
+# Update Data (SQL UPDATE)
+querry = select(User).where(User.id == 1)
+user = session.execute(querry).scalars().first()
+user.name = "Jonte"
+session.commit()
