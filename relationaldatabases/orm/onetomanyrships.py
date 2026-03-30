@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from sqlalchemy import create_engine, String, ForeignKey
+from sqlalchemy import create_engine, String, ForeignKey, select
 from sqlalchemy.orm import DeclarativeBase, Session, Mapped, mapped_column, relationship
 from typing import List, Optional
 
@@ -51,3 +51,13 @@ session.commit()
 new_pet = Pets(name="Kitty", animal="cat", user_id=1)
 session.add(new_pet)
 session.commit()
+
+# Querying Pets Owned by a User
+query = select(User).where(User.name == "Peter")
+user = session.execute(query).scalars().first()
+
+if user:
+    for pet in user.pets:
+        print(pet.name)
+else:
+    print("User not found")
