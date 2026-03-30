@@ -25,3 +25,19 @@ class User(Base):
     # One-to-Many: User -> List of Pet objects
     pets: Mapped[List["Pet"]] = relationship(back_populates="owner", cascade="all, delete_orphan")
 
+
+# Pet model
+class Pets(Base):
+    __tablename__ = "pets"
+
+    # columns
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_colum(String(200))
+    animal: Mapped[str] = mapped_column(String(200))
+    user_id: Mapped[int] = mapped_column(ForeignKey("user_account.id"))
+
+    # Many-to-One: Pet -> User
+    owner: Mapped["User"] = relationship(back_populates="pets")
+
+# create tables
+Base.metadata.create_all(engine)
