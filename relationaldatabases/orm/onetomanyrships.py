@@ -22,7 +22,7 @@ class User(Base):
     fullname: Mapped[Optional[str]] = mapped_column(String(200))
     
     # One-to-Many: User -> List of Pet objects
-    pets: Mapped[List["Pet"]] = relationship(back_populates="owner", cascade="all, delete-orphan")
+    pets: Mapped[List["Pets"]] = relationship(back_populates="owner", cascade="all, delete-orphan")
 
 
 # Pet model
@@ -45,4 +45,9 @@ session = Session(engine)
 
 new_user = User(name="Peter", fullname="Peter John")
 session.add(new_user)
+session.commit()
+
+# Adding a Pet for a User
+new_pet = Pets(name="Kitty", animal="cat", user_id=1)
+session.add(new_pet)
 session.commit()
