@@ -61,3 +61,10 @@ session.add(son)
 session.add(dog)
 session.add(goldfish)
 session.commit()
+
+# Creating relationships between User and Pet
+mother.pets.append(dog)
+son.pets.append(dog)
+son.pets.append(goldfish)
+session.commit()
+
