@@ -12,4 +12,10 @@ class Base(DeclarativeBase):
     pass
 
 
-
+# Association table for User and Pet
+user_pet = Table(
+        "user_pet",
+        Base.metadata,
+        Column("user_id", ForeignKey("user_account.id")),
+        Column("pet_id", ForeignKey(pets.id)),
+)
