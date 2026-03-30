@@ -68,3 +68,9 @@ son.pets.append(dog)
 son.pets.append(goldfish)
 session.commit()
 
+# Accessing these relationships
+for owner in dog.owners:
+    print(owner.name)
+
+for pet in son.pets:
+    print(pet.name)
