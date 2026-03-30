@@ -17,7 +17,7 @@ user_pet = Table(
         "user_pet",
         Base.metadata,
         Column("user_id", ForeignKey("user_account.id")),
-        Column("pet_id", ForeignKey(pets.id)),
+        Column("pet_id", ForeignKey("pets.id")),
 )
 
 # User model
@@ -26,7 +26,7 @@ class User(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(50))
-    email: Mapped[optional[str]] = mapped_column(String(100))
+    email: Mapped[Optional[str]] = mapped_column(String(100))
 
     # Many-to-Many: User <-> Pet
     pets: Mapped[List["Pet"]] = relationship(secondary=user_pet, back_populates="owners")
@@ -45,3 +45,19 @@ class Pet(Base):
 
 # Create Tables
 Base.metadata.create_all(engine)
+
+# Creating User and Pet Objects
+session = Session(engine)
+
+mother = User(name="Alice", email="awonderland@email.com")
+son = User(name="Peter", email="pcottontail@email.com")
+
+dog = Pet(name="Buddy", animal="dog")
+goldfish = Pet(name="Goldy", animal="fish")
+
+# Add all new objects into session
+session.add(mother)
+session.add(son)
+session.add(dog)
+session.add(goldfish)
+session.commit()
