@@ -61,3 +61,9 @@ if user:
         print(pet.name)
 else:
     print("User not found")
+
+# Querying a Pet's owner
+query = select(Pets).where(Pets.name == "Kitty")
+pet = session.execute(query).scalars().first()
+
+print(pet.owner.name)
