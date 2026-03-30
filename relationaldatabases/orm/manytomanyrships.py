@@ -6,3 +6,10 @@ from typing import List, Optional
 
 # Database connection
 engine = create_engine('mysql+mysqlconnector://millie:ciku2015@localhost/relationships', echo=True)
+
+# Base class for models
+class Base(DeclarativeBase):
+    pass
+
+
+
