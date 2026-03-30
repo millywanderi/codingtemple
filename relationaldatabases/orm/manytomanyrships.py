@@ -43,4 +43,5 @@ class Pet(Base):
     # Many-to-Many: Pet <-> User
     owners: Mapped[List["User"]] = relationship(secondary=user_pet, back_populates="pets")
 
-# 
+# Create Tables
+Base.metadata.create_all(engine)
