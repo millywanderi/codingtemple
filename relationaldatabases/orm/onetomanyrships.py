@@ -8,4 +8,9 @@ from typing import List, Optional
 # A user can have multiple pets but each pet has only 1 owner
 engine = create_engine('mysql+mysqlconnector://root:ciku2015@localhost/mypetdatabase', echo=True)
 
+# Base class for models
+class Base(DeclarativeBase):
+    pass
+
+
 
