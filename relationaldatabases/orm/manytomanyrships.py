@@ -32,4 +32,15 @@ class User(Base):
     pets: Mapped[List["Pet"]] = relationship(secondary=user_pet, back_populates="owners")
 
 
+# Pet model
+class Pet(Base):
+    __tablename__ = "pets"
 
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(30))
+    animal: Mapped[str] = mapped_column(String(100))
+
+    # Many-to-Many: Pet <-> User
+    owners: Mapped[List["User"]] = relationship(secondary=user_pet, back_populates="pets")
+
+# 
