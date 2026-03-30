@@ -19,3 +19,17 @@ user_pet = Table(
         Column("user_id", ForeignKey("user_account.id")),
         Column("pet_id", ForeignKey(pets.id)),
 )
+
+# User model
+class User(Base):
+    __tablename__ = "user_account"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(50))
+    email: Mapped[optional[str]] = mapped_column(String(100))
+
+    # Many-to-Many: User <-> Pet
+    pets: Mapped[List["Pet"]] = relationship(secondary=user_pet, back_populates="owners")
+
+
+
