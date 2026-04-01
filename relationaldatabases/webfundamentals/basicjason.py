@@ -31,3 +31,12 @@ x = {
 }
 y = json.dumps(x)
 print(y)
+
+# Convert Python dictionary to JSON string
+person_json = {
+    "name": "John",
+    "age": 30,
+    "is_student": False
+}
+data = json.dumps(person_json)
+print(data)
