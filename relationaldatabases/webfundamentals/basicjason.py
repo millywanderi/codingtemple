@@ -22,3 +22,12 @@ name = data["name"]
 skills = data["skills"]
 
 print(f"Name: {name}, Skills: {skills}")
+
+# Serializing (Converting) Python Data to JSON
+x = {
+        "name": "Lyle",
+        "age": 7,
+        "city": "Nairobi"
+}
+y = json.dumps(x)
+print(y)
