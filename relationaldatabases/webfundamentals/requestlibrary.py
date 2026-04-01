@@ -9,6 +9,9 @@ response = requests.get('https://pokeapi.co/api/v2/pokemon/pikachu')
 # Check if the request was successful
 if response.status_code == 200:
     data = response.json()
-    print(data)
+    name = data['name']
+    height = data['height']
+    ability = [ability['ability']['name'] for ability in data['abilities']]
+    print(name, height, ability)
 else:
     print(f"Error: response.status_code")
