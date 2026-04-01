@@ -6,3 +6,19 @@ import json
 x =  '{"name": "Kylie", "age": 10, "school": "Precious Brooks"}'
 y = json.loads(x)
 print(y["school"])
+
+# Use loads() to parse json to python
+person = '''
+{
+    "name": "Millie",
+    "age": 26,
+    "skills": ["Python", "Data Analysis"]
+}
+'''
+
+data = json.loads(person)
+
+name = data["name"]
+skills = data["skills"]
+
+print(f"Name: {name}, Skills: {skills}")
