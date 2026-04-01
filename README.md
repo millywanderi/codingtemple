@@ -112,3 +112,7 @@ define. Specifically, we explored:
 Special methods, also called magic or dunder methods (__repr__ & __str__)
 Class methods (@classmethod)
 Static methods (@staticmethod)
+
+### Relational Databases & API REST Development
+* **We covered the following areas:** Database Fundamentals, SQL 
+Essentials, Intro to ORM's, Web Fundamentals,
