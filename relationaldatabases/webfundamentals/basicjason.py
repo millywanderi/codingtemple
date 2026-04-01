@@ -65,4 +65,4 @@ x = {
         {"model": "Ford Edge", "mpg": 24.1}
     ]
 }
-print(json.dumps(x))
+print(json.dumps(x, indent=4))
