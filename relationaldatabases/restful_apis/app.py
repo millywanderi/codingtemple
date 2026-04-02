@@ -27,3 +27,11 @@ db = SQLAlchemy(model_class=Base)
 db.init_app(app)
 ma = Marshmallow(app)
 
+# Association Table
+user_pet = Table(
+        "user_pet",
+        Base.metadata,
+        Column("user_id", ForeignKey("user_account.id"), primary_key=True),
+        Column("pet_id", ForeignKey("pets.id"), primary_key=True)
+)
+
