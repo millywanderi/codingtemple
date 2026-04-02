@@ -17,3 +17,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = FALSE
 # Creating our Base Model
 class Base(DeclarativeBase):
     pass
+
+# Initialize SQLAlchemy and Marshmallow
+db = SQL
