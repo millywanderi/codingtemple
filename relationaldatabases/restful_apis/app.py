@@ -35,3 +35,22 @@ user_pet = Table(
         Column("pet_id", ForeignKey("pets.id"), primary_key=True)
 )
 
+# Models
+class User(Base):
+    __tablename__ = "user_account"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(30), nullable=False)
+    email: Mapped[str] = mapped_column(String(200))
+
+    #One-to-Many relationship from this User to a List of Pet Objects
+    pets: Mapped[List["Pet"]] = relationship("Pet", secondary=user_pet, back_populates="owners")
+
+
+class Pet(Base):
+    __tablename__ = "pets"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(200), nullable=False)
+    animal: Mapped[str] = mapped_column(String(200), nullable=False)
+
+    # One-to-Many relationship, One pet can be related to a List of Users
+    owners: Mapped[List["User"]] = realtionship("User", secondary=user_pet, back_populates="pets")
