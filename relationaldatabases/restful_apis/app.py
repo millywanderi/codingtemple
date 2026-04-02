@@ -4,19 +4,19 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
-from sqlalchemy.orm import DeclarativeBase, relationship
+from sqlalchemy.orm import DeclarativeBase, relationship, Mapped, mapped_column
 from sqlalchemy import ForeignKey, Table, Column, String, Integer
-from marshmallow import ValidatorError
+#from marshmallow import ValidatorError
 from typing import List, Optional
-from __future__ import annotations
+#from __future__ import annotations
 import os
 
 # Initialize Flask app
 app = Flask(__name__)
 
 # MySQL database configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:ciku2015@localhost/flask_api_db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = FALSE
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://millie:ciku2015@localhost/flask_api_db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Creating our Base Model
 class Base(DeclarativeBase):
@@ -53,4 +53,12 @@ class Pet(Base):
     animal: Mapped[str] = mapped_column(String(200), nullable=False)
 
     # One-to-Many relationship, One pet can be related to a List of Users
-    owners: Mapped[List["User"]] = realtionship("User", secondary=user_pet, back_populates="pets")
+    owners: Mapped[List["User"]] = relationship("User", secondary=user_pet, back_populates="pets")
+
+
+if __name__ == "__main__":
+    with app.app_context():
+        # db.drop_all()
+        db.create_all()
+
+    app.run(debug=True)
