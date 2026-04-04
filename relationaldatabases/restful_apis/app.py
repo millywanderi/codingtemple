@@ -55,6 +55,13 @@ class Pet(Base):
     # One-to-Many relationship, One pet can be related to a List of Users
     owners: Mapped[List["User"]] = relationship("User", secondary=user_pet, back_populates="pets")
 
+#User Schema
+class UserSchema(Ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = User
+
+
+
 
 if __name__ == "__main__":
     with app.app_context():
