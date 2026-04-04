@@ -65,6 +65,13 @@ class PetSchema(Ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Pet
 
+# Initialize Schemas
+user_schema = UserSchema()
+users_schema = UserSchema(many=True)
+
+pet_schema = PetSchema()
+pets_schema = PetSchema(many=True)
+
 
 if __name__ == "__main__":
     with app.app_context():
