@@ -60,7 +60,10 @@ class UserSchema(Ma.SQLAlchemyAutoSchema):
     class Meta:
         model = User
 
-
+# Pet Schema
+class PetSchema(Ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Pet
 
 
 if __name__ == "__main__":
