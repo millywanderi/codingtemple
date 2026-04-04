@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from sqlalchemy.orm import DeclarativeBase, relationship, Mapped, mapped_column
 from sqlalchemy import ForeignKey, Table, Column, String, Integer
-#from marshmallow import ValidatorError
+from marshmallow import ValidatorError
 from typing import List, Optional
 #from __future__ import annotations
 import os
@@ -54,6 +54,96 @@ class Pet(Base):
 
     # One-to-Many relationship, One pet can be related to a List of Users
     owners: Mapped[List["User"]] = relationship("User", secondary=user_pet, back_populates="pets")
+
+#User Schema
+class UserSchema(Ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = User
+
+# Pet Schema
+class PetSchema(Ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = Pet
+
+# Initialize Schemas
+user_schema = UserSchema()
+users_schema = UserSchema(many=True)
+
+pet_schema = PetSchema()
+pets_schema = PetSchema(many=True)
+
+# Creating API Endpoints (User)
+@app.route('/users', methods=['POST'])
+def create_user():
+    try:
+        user_data = user_schema.load(request.json)
+    except ValidationError as e:
+        return jsonify(e.message), 400
+
+    new_user = User(name=user_data['name'], email=user_data['email'])
+    db.session.add()
+    db.session.commit()
+
+    return user_schema.jsonify(new_user), 201
+
+# Read All Users
+@app.users('/users', methods=['GET'])
+def get_users():
+    query = select(User)
+    users = db.session.execute(query).scalars().all()
+
+    return users_schema.jsonify(users), 200
+
+# Read a Single User by ID
+@app.route('/users/<int:id>', methods=['GET'])
+def get_user(id):
+    user = db.session.get(User, id)
+    return user_schema.jsonify(user), 200
+
+# Update User
+@app.route('/users/<int:id>', methods=['PUT'])
+def update_user(id):
+    user = db.session.get(User, id)
+
+    if not user:
+        return jsonify({"message": "Invalid User Id"}), 400
+
+    try:
+        user_data = user_schema.load(request.json)
+    except ValidationError as e:
+        return jsonify(e.messages), 400
+
+    user.name = user_data['name']
+    user.email = user_data['email']
+
+    db.session.commit()
+    return user_schema.jsonify(user), 200
+
+# Delete User
+@app.route('/users/<int:id>', methods=['DELETE'])
+def delete_user(id):
+    user = db.session.get(User, id)
+
+    if not user:
+        return jsonify({"message": "Invalid used Id"}), 400
+
+    db.session.delete(user)
+    db.session.commit()
+    return jsonify({"message": f"successfully deleted user {id}"}), 200
+
+# Create Pet and Associate Pets with Users (PET)
+@app.route('/pets/', methods=['POST'])
+def create_pet():
+    try:
+        pet_data = pet_schema.load(request.json)
+    except ValidationError as e:
+        return jsonify(e.messages), 400
+
+    new_pet = Pet(name=pet_data['name'], animal=pet_data['animal'])
+    db.session.add(new_pet)
+    db.commit()
+
+    return pet_schema.jsonify(new_pet), 201
 
 
 if __name__ == "__main__":
