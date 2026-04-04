@@ -72,6 +72,20 @@ users_schema = UserSchema(many=True)
 pet_schema = PetSchema()
 pets_schema = PetSchema(many=True)
 
+# Creating API Endpoints (User)
+@app.route('/users', method=['POST'])
+def create_user():
+    try:
+        user_data = user_schema.load(request.json)
+    except ValidationError as e:
+        return jsonify(e.message), 400
+
+    new_user = User(name=user_data['name'], email=user_data['email'])
+    db.session.add()
+    db.session.commit()
+
+    return user_schema.jsonify(new_user), 201
+
 
 if __name__ == "__main__":
     with app.app_context():
