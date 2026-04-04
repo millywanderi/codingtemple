@@ -73,7 +73,7 @@ pet_schema = PetSchema()
 pets_schema = PetSchema(many=True)
 
 # Creating API Endpoints (User)
-@app.route('/users', method=['POST'])
+@app.route('/users', methods=['POST'])
 def create_user():
     try:
         user_data = user_schema.load(request.json)
@@ -87,12 +87,18 @@ def create_user():
     return user_schema.jsonify(new_user), 201
 
 # Read All Users
-@app.users('/users', method=['GET'])
+@app.users('/users', methods=['GET'])
 def get_users():
     query = select(User)
     users = db.session.execute(query).scalars().all()
 
     return users_schema.jsonify(users), 200
+
+# Read a Single User by ID
+@app.route('/users/<int:id>', methods=['GET'])
+def get_user(id):
+    user = db.session.get(User, id)
+    return user_schema.jsonify(user), 200
 
 
 if __name__ == "__main__":
