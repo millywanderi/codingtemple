@@ -131,6 +131,20 @@ def delete_user(id):
     db.session.commit()
     return jsonify({"message": f"successfully deleted user {id}"}), 200
 
+# Create Pet and Associate Pets with Users (PET)
+@app.route('/pets/', methods=['POST'])
+def create_pet():
+    try:
+        pet_data = pet_schema.load(request.json)
+    except ValidationError as e:
+        return jsonify(e.messages), 400
+
+    new_pet = Pet(name=pet_data['name'], animal=pet_data['animal'])
+    db.session.add(new_pet)
+    db.commit()
+
+    return pet_schema.jsonify(new_pet), 201
+
 
 if __name__ == "__main__":
     with app.app_context():
