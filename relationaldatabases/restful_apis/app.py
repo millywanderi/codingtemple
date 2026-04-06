@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from sqlalchemy.orm import DeclarativeBase, relationship, Mapped, mapped_column
 from sqlalchemy import ForeignKey, Table, Column, String, Integer
-from marshmallow import ValidatorError
+from marshmallow import ValidationError
 from typing import List, Optional
 #from __future__ import annotations
 import os
@@ -56,12 +56,12 @@ class Pet(Base):
     owners: Mapped[List["User"]] = relationship("User", secondary=user_pet, back_populates="pets")
 
 #User Schema
-class UserSchema(Ma.SQLAlchemyAutoSchema):
+class UserSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = User
 
 # Pet Schema
-class PetSchema(Ma.SQLAlchemyAutoSchema):
+class PetSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Pet
 
@@ -81,11 +81,12 @@ def create_user():
         return jsonify(e.message), 400
 
     new_user = User(name=user_data['name'], email=user_data['email'])
-    db.session.add()
+    db.session.add(new_user)
     db.session.commit()
 
     return user_schema.jsonify(new_user), 201
 
+"""
 # Read All Users
 @app.users('/users', methods=['GET'])
 def get_users():
@@ -144,6 +145,7 @@ def create_pet():
     db.commit()
 
     return pet_schema.jsonify(new_pet), 201
+"""
 
 
 if __name__ == "__main__":
