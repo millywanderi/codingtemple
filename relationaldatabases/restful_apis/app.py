@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from sqlalchemy.orm import DeclarativeBase, relationship, Mapped, mapped_column
-from sqlalchemy import ForeignKey, Table, Column, String, Integer
+from sqlalchemy import ForeignKey, Table, Column, String, Integer, select
 from marshmallow import ValidationError
 from typing import List, Optional
 #from __future__ import annotations
@@ -86,15 +86,16 @@ def create_user():
 
     return user_schema.jsonify(new_user), 201
 
-"""
+
 # Read All Users
-@app.users('/users', methods=['GET'])
+@app.route('/users', methods=['GET'])
 def get_users():
     query = select(User)
     users = db.session.execute(query).scalars().all()
 
     return users_schema.jsonify(users), 200
 
+"""
 # Read a Single User by ID
 @app.route('/users/<int:id>', methods=['GET'])
 def get_user(id):
