@@ -95,13 +95,14 @@ def get_users():
 
     return users_schema.jsonify(users), 200
 
-"""
+
 # Read a Single User by ID
 @app.route('/users/<int:id>', methods=['GET'])
 def get_user(id):
     user = db.session.get(User, id)
     return user_schema.jsonify(user), 200
 
+"""
 # Update User
 @app.route('/users/<int:id>', methods=['PUT'])
 def update_user(id):
