@@ -86,7 +86,6 @@ def create_user():
 
     return user_schema.jsonify(new_user), 201
 
-
 # Read All Users
 @app.route('/users', methods=['GET'])
 def get_users():
@@ -95,14 +94,12 @@ def get_users():
 
     return users_schema.jsonify(users), 200
 
-
 # Read a Single User by ID
 @app.route('/users/<int:id>', methods=['GET'])
 def get_user(id):
     user = db.session.get(User, id)
     return user_schema.jsonify(user), 200
 
-"""
 # Update User
 @app.route('/users/<int:id>', methods=['PUT'])
 def update_user(id):
@@ -122,6 +119,7 @@ def update_user(id):
     db.session.commit()
     return user_schema.jsonify(user), 200
 
+"""
 # Delete User
 @app.route('/users/<int:id>', methods=['DELETE'])
 def delete_user(id):
