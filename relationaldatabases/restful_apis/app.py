@@ -131,7 +131,6 @@ def delete_user(id):
     db.session.commit()
     return jsonify({"message": f"successfully deleted user {id}"}), 200
 
-"""
 # Create Pet and Associate Pets with Users (PET)
 @app.route('/pets/', methods=['POST'])
 def create_pet():
@@ -145,7 +144,6 @@ def create_pet():
     db.commit()
 
     return pet_schema.jsonify(new_pet), 201
-"""
 
 
 if __name__ == "__main__":
