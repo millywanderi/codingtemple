@@ -156,6 +156,19 @@ def adopt_pet(user_id, pet_id):
 
     return jsonify({"message": f"{user.name} adopted the {pet.animal}, {pet.name}!"}), 200
 
+# Associate Multiple Pets with a User
+@app.route('/users/<int:user_id>/add_pets', methods=['POST'])
+def add_pets(user_id):
+    user = db.session.get(User, user_id)
+    pet_data = request.json
+
+    for id in pet_data['pet_ids']:
+        pet = db.session.get(Pet, id)
+        user.pets.append(pet)
+        db.session.commit()
+
+    return jsonify({"message": "All pets added!"}), 200
+
 
 if __name__ == "__main__":
     with app.app_context():
