@@ -119,7 +119,6 @@ def update_user(id):
     db.session.commit()
     return user_schema.jsonify(user), 200
 
-"""
 # Delete User
 @app.route('/users/<int:id>', methods=['DELETE'])
 def delete_user(id):
@@ -132,6 +131,7 @@ def delete_user(id):
     db.session.commit()
     return jsonify({"message": f"successfully deleted user {id}"}), 200
 
+"""
 # Create Pet and Associate Pets with Users (PET)
 @app.route('/pets/', methods=['POST'])
 def create_pet():
