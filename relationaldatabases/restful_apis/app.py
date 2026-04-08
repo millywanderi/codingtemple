@@ -141,7 +141,7 @@ def create_pet():
 
     new_pet = Pet(name=pet_data['name'], animal=pet_data['animal'])
     db.session.add(new_pet)
-    db.commit()
+    db.session.commit()
 
     return pet_schema.jsonify(new_pet), 201
 
