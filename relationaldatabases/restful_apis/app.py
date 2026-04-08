@@ -145,6 +145,17 @@ def create_pet():
 
     return pet_schema.jsonify(new_pet), 201
 
+# Associate a Single Pet with a User
+@app.route('/users/<int:user_id>/add_pet/<int:pet_id>/', methods=['GET'])
+def adopt_pet(used_id, pet_id):
+    user = db.session.get(User, user_id)
+    pet = db.session.get(Pet, pet_id)
+
+    user.pet.append(pet)
+    db.session.commit()
+
+    return jsonify({"message": f"{user.name} adopted the {pet.animal}, {pet.name}!"}), 200
+
 
 if __name__ == "__main__":
     with app.app_context():
