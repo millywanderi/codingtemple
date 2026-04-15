@@ -25,4 +25,12 @@ def create_app(config_name):
     limiter.init_app(app)
     cache.init_app(app)
 
+    # registering blueprints
+    app.register_blueprint(members_bp, url_prefix='/members')
+    app.register_blueprint(books_bp, url_prefix='/books')
+    app.register_blueprint(loan_bp, url_prefix='/loans')
+    app.register_blueprint(items_bp, url_prefix='/items')
+    app.register_blueprint(orders_bp, url_prefix='/orders')
+    app.register_blueprint(swagger_blueprint, url_prefix=SWAGGER_URL)
 
+    return app
