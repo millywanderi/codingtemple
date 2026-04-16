@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+from flask import Flask
 #Setup Swagger in app/__init__.py to access documentation & test APIs
 from flask_swagger_ui import get_swaggerui_blueprint
 
@@ -10,7 +11,7 @@ swaggerui_blueprint = get_swaggerui_blueprint(
     SWAGGER_URL,
     API_URL,
     config={
-        'Library API': 
+        "app_name": "Library API" 
     }
 )
 
@@ -34,3 +35,8 @@ def create_app(config_name):
     app.register_blueprint(swagger_blueprint, url_prefix=SWAGGER_URL)
 
     return app
+
+
+if __name__ == "__main__":
+    app = create_app("Lirary API")  # or whatever config you use
+    app.run(debug=True)

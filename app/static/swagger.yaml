@@ -1,5 +1,3 @@
-# Yaml documentation API initializating
-
 swagger: '2.0'
 info:
   title: "Library API"
@@ -13,5 +11,105 @@ consumes:
 produces:
   - "application/json"
 paths:
+  /members/login:
+    post:
+      tags:
+        - members
+      summary: "Login endpoint, (generates token)"
+      description: "Validates member credentials , generates and return a member specific token."
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Login Credentials"
+          required: true
+          schema:
+            $ref: "#definitions/LoginCredentials"
+      responses:
+        200:
+          description: "Login successful"
+          schema:
+            $ref: "#/definitions/LoginResponse"
+
+  /members: # endpoint
+    post: #Post request
+      tags:
+        - members
+      summary: "Endpoint to create/register a new user"
+      description: "Endpoint to create a new member in a Library system, emails must be unique."
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Information required to create a new Member."
+          required: true
+          schema:
+            $ref: "#/definitions/CreateMemberPayload"
+      responses:
+        201:
+          descriptions: "Successful Member Creation"
+          schema:
+            $ref: "#/definitions/CreateMemberResponse"
+          examples:
+            application/json:
+              id: 1
+              name: "Millicent Wanderi"
+              DOB: "1900-07-31"
+              email: "millicentw@email.com"
+              password: password123
+
 definitions:
+
+  LoginCredentials:
+    type: "object"
+    properties:
+      email:
+        type: "string"
+      password:
+        type: "string"
+
+      required:
+        - email
+        - password
+
+  LoginResponse:
+    type: "object"
+    properties:
+      token:
+        type: "string"
+      message:
+        type: "string"
+      status:
+        type: "string"
+
+  CreateMemberPayload:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      email:
+        type: "string"
+      DOB:
+        type: "string"
+        format: date
+      password:
+        type: "string"
+    
+    required:
+      - name
+      - email
+      - DOB
+      - password
+
+  CreateMemberResponse:
+    type: "object"
+    properties:
+      id:
+        type: "int"
+      name:
+        type: "string"
+      email:
+        type: "string"
+      DOB:
+        type: "string"
+      password:
+        type: "string"
 
