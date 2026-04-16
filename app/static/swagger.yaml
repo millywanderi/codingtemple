@@ -53,3 +53,36 @@ definitions:
       status:
         type: "string"
 
+  CreateMemberPayload:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      email:
+        type: "string"
+      DOB:
+        type: "string"
+        format: date
+      password:
+        type: "string"
+    
+    required:
+      - name
+      - email
+      - DOB
+      - password
+
+  CreateMemberResponse:
+    type: "object"
+    properties:
+      id:
+        type: "int"
+      name:
+        type: "string"
+      email:
+        type: "string"
+      DOB:
+        type: "string"
+      password:
+        type: "string"
+
