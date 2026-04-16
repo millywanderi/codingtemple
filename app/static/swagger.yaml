@@ -29,6 +29,33 @@ paths:
           description: "Login successful"
           schema:
             $ref: "#/definitions/LoginResponse"
+
+  /members: # endpoint
+    post: #Post request
+      tags:
+        - members
+      summary: "Endpoint to create/register a new user"
+      description: "Endpoint to create a new member in a Library system, emails must be unique."
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Information required to create a new Member."
+          required: true
+          schema:
+            $ref: "#/definitions/CreateMemberPayload"
+      responses:
+        201:
+          descriptions: "Successful Member Creation"
+          schema:
+            $ref: "#/definitions/CreateMemberResponse"
+          examples:
+            application/json:
+              id: 1
+              name: "Millicent Wanderi"
+              DOB: "1900-07-31"
+              email: "millicentw@email.com"
+              password: password123
+
 definitions:
 
   LoginCredentials:
