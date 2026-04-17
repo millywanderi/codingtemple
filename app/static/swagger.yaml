@@ -56,6 +56,17 @@ paths:
               email: "millicentw@email.com"
               password: password123
 
+  /members:
+    get:
+      tags:
+        - members
+      summary: "Returns all Members"
+      description: "Endpoint to retrieve a list of all members"
+      responses:
+        200:
+          description: "Retrieved Members Successfully"
+          schema:
+            $ref: "#/definitions/AllMembers"
 definitions:
 
   LoginCredentials:
