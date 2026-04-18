@@ -74,6 +74,35 @@ paths:
           description: "Retrieved Members Successfully"
           schema:
             $ref: "#/definitions/AllMembers"
+
+  /members:
+    put:
+      tags:
+        - Members
+      summary: "Endpoint to update user."
+      description: "Endpoint to update a member, this is a token authenticated route, and the user must be logged in to update their account."
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Information required to Update a Member."
+          required: true
+          schema:
+            $ref: "#/definitions/UpdateMemberPayload"
+      responses:
+        200:
+          description: "Successfully updated member"
+          schema:
+            $ref: "#/definitions/UpdateMemberResponse"
+          examples:
+            application/json:
+              id: 2
+              name: Kylie Kinsley
+              DOB: "1902-05-11"
+              email: kyliek@email.com
+              password: password456
+
 definitions:
 
   LoginCredentials:
