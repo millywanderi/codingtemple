@@ -74,6 +74,52 @@ paths:
           description: "Retrieved Members Successfully"
           schema:
             $ref: "#/definitions/AllMembers"
+
+  /members:
+    put:
+      tags:
+        - Members
+      summary: "Endpoint to update user."
+      description: "Endpoint to update a member, this is a token authenticated route, and the user must be logged in to update their account."
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "Information required to Update a Member."
+          required: true
+          schema:
+            $ref: "#/definitions/UpdateMemberPayload"
+      responses:
+        200:
+          description: "Successfully updated member"
+          schema:
+            $ref: "#/definitions/UpdateMemberResponse"
+          examples:
+            application/json:
+              id: 2
+              name: Kylie Kinsley
+              DOB: "1902-05-11"
+              email: kyliek@email.com
+              password: password456
+
+  /members:
+    delete:
+      tags:
+        - Members
+      summary: "Endpoint to delete a member"
+      description: "Endpoint to delete a member. Requires token authentication, member must be logged in to delete their account"
+      security:
+        bearerAuth: []
+      responses:
+        200:
+          description: "Successfully Deleted member"
+          schema:
+            $ref: "#/definitions/DeleteMemberResponse"
+          examples:
+            application/json:
+              message: "successfully deleted user <member_id>"
+
 definitions:
 
   LoginCredentials:
@@ -180,3 +226,8 @@ definitions:
       password:
         type: "string"
 
+  DeleteMemberResponse:
+    type: "object"
+    properties:
+      message:
+        type: "string"
