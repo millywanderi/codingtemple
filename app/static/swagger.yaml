@@ -103,6 +103,23 @@ paths:
               email: kyliek@email.com
               password: password456
 
+  /members:
+    delete:
+      tags:
+        - Members
+      summary: "Endpoint to delete a member"
+      description: "Endpoint to delete a member. Requires token authentication, member must be logged in to delete their account"
+      security:
+        bearerAuth: []
+      responses:
+        200:
+          description: "Successfully Deleted member"
+          schema:
+            $ref: "#/definitions/DeleteMemberResponse"
+          examples:
+            application/json:
+              message: "successfully deleted user <member_id>"
+
 definitions:
 
   LoginCredentials:
