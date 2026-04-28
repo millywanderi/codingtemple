@@ -41,3 +41,43 @@ def create_app(config_name=None):
     else:
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
     db.init_app(app)
+
+    # routes
+    @app.route('/members/', methods=['POST'])
+    def create_member():
+        data = request.get_json()
+
+        errors = {}
+
+        # validation
+        if 'email' not in data:
+            errors['email'] = ['Missing data for the required field.']
+        if 'name' not in data:
+            errors['name'] = ['Missing data for required field.']
+        if 'DOB' not in data:
+            errors['DOB'] = ['Missing data for required field.']
+        if 'password' not in data:
+            errors['password'] = ['Missing data for required field.']
+
+        if errors:
+            return jsonify(errors), 400
+
+        try:
+            dob = datetime.strptime(data[DOB], %Y-%m-%d).date()
+        except Exception:
+            return jsonify({"DOB": ["Invalid date format."]}), 400
+
+        member = Member(
+            name=data['name'],
+            email=data['email'],
+            DOB=dob,
+            password=data['password']
+        )
+        db.session.add(member)
+        db.session.commit()
+
+        return jsonify({
+            "id": member.id,
+            "name": member.name,
+            "email": member.email
+        }), 201
