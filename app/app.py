@@ -29,3 +29,15 @@ def decode_token(token):
         return jwt.encode(payload, SECRET_KEY, algorithms=["HS256"])
     except Exception:
         return None
+
+# app factory
+def create_app(config_name=None):
+    app = Flask(__name__)
+
+    # Config
+    if config_name == "TestingConfig":
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///testing.db'
+        app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    else:
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
+    db.init_app(app)
