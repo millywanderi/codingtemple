@@ -23,3 +23,9 @@ def encode_token(user_id, role):
         "role": role
     }
     return jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+
+def decode_token(token):
+    try:
+        return jwt.encode(payload, SECRET_KEY, algorithms=["HS256"])
+    except Exception:
+        return None
