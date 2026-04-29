@@ -63,7 +63,7 @@ def create_app(config_name=None):
             return jsonify(errors), 400
 
         try:
-            dob = datetime.strptime(data[DOB], %Y-%m-%d).date()
+            dob = datetime.strptime(data['DOB'], "%Y-%m-%d").date()
         except Exception:
             return jsonify({"DOB": ["Invalid date format."]}), 400
 
@@ -84,4 +84,59 @@ def create_app(config_name=None):
 
     # login
     @app.route('/members/login', methods=['POST'])
+    def login_member():
+        data = request.get_json()
 
+        member = Member.query.filter_by(email=data.get('email')).first()
+
+        if not member or member.password != data.get('password'):
+            return jsonify({
+                "message": "Invalid email or password!"
+            }), 400
+
+        token = encode_token(member.id, 'admin')
+
+        return jsonify({
+            "status": "success",
+            "token": token
+        }), 200
+
+    # Update Member (Protected)
+    @app.route('/members/', methods=['PUT'])
+    def update_member():
+        auth_header = request.headers.get('Authorization')
+
+        if not auth_header:
+            return jsonify({"message": "Token Missing!"}), 401
+
+        token = auth_header.split(" ")[1]
+        decoded = decode_token(token)
+
+        if not decoded:
+            return jsonify({"message": "Invalid Token"}), 401
+
+        member = Member.query.get(decoded['user_id'])
+        if not member:
+            return jsonify({"message": "User not found"}), 404
+
+        data = request.get_json()
+
+        # Only update if value provided
+        if data.get('name'):
+            member.name = data['name']
+
+        if data.get('email'):
+            member.email = data['email']
+
+        if data.get('password'):
+            member.password = data['password']
+
+        db.session.commit()
+
+        return jsonify({
+            "id": member.id,
+            "name": member.name,
+            "email": member.email
+        }), 200
+
+    return app

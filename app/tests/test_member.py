@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+from app import create_app
+from app.models import db
+import unittest
+
+class TestMember(unittest.TestCase):
+    def setUp(self):
+        self.app = create_app("TestingConfig")
+        with self.app_context():
+            db.drop_all()
+            db.create_all()
+        self.client = self.app.test_cllient()
