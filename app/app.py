@@ -100,3 +100,23 @@ def create_app(config_name=None):
             "status": "success",
             "token": token
         }), 200
+
+    # Update Member (Protected)
+    @app.route('/members/', methods=['PUT'])
+    def update_member():
+        auth_header = request.headers.get('Authorization')
+
+        if not auth_header:
+            return jsonify({"message": "Token Missing!"}), 401
+
+        token = auth_header.split(" ")[1]
+        decoded = decode_token(token)
+
+        if not decoded:
+            return jsonify({"message": "Invalid Token"}), 401
+
+        member = Member.query.get(decoded['user_id'])
+        if not member:
+            return jsonify({"message": "User not found"}), 404
+
+        data = request.get_json()
