@@ -120,3 +120,23 @@ def create_app(config_name=None):
             return jsonify({"message": "User not found"}), 404
 
         data = request.get_json()
+
+        # Only update if value provided
+        if data.get('name'):
+            member.name = data['name']
+
+        if data.get('email'):
+            member.email = data['email']
+
+        if data.get('password'):
+            member.password = data['password']
+
+        db.session.commit()
+
+        return jsonify({
+            "id": member.id,
+            "name": member.name,
+            "email": member.email
+        }), 200
+
+    return app
