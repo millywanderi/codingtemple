@@ -84,4 +84,19 @@ def create_app(config_name=None):
 
     # login
     @app.route('/members/login', methods=['POST'])
+    def login_member():
+        data = request.get_json()
 
+        member = Member.query.filter_by(email=data.get('email')).first()
+
+        if not member or member.password != data.get('password'):
+            return jsonify({
+                "message": "Invalid email or password!"
+            }), 400
+
+        token = encode_token(member.id, 'admin')
+
+        return jsonify({
+            "status": "success",
+            "token": token
+        }), 200
