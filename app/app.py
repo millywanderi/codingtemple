@@ -63,7 +63,7 @@ def create_app(config_name=None):
             return jsonify(errors), 400
 
         try:
-            dob = datetime.strptime(data[DOB], %Y-%m-%d).date()
+            dob = datetime.strptime(data['DOB'], "%Y-%m-%d").date()
         except Exception:
             return jsonify({"DOB": ["Invalid date format."]}), 400
 
