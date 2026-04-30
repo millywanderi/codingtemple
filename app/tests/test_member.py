@@ -8,10 +8,10 @@ import unittest
 class TestMember(unittest.TestCase):
     def setUp(self):
         self.app = create_app("TestingConfig")
-        with self.app_context():
+        with self.app.app_context():
             db.drop_all()
             db.create_all()
-        self.client = self.app.test_cllient()
+        self.client = self.app.test_client()
 
     def test_create_member(self):
         member_payload = {
