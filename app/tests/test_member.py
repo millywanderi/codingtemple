@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 from app import create_app
-from app.models import db
+#from app.models import db
+from models import db
 import unittest
 
 class TestMember(unittest.TestCase):
