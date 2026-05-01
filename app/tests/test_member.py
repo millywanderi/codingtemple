@@ -61,3 +61,13 @@ class TestMember(unittest.Testcase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json['status'], 'success')
         return response.json['token']
+
+    def test_invalid_login(self):
+        credentials = {
+            "email": "invalid@email.com",
+            "password": "invalid_pas"
+        }
+        
+        response = self.client.post('/members/login', json=credentials)
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.json['message'], 'Invalid email or password')
