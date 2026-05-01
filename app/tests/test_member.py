@@ -50,3 +50,14 @@ class TestMember(unittest.Testcase):
             db.session.commit()
         self.token = encode_token(1, 'admin')
         self.client = self.app.test_client()
+
+    def test_login_member(self):
+        credentials = {
+            "email": "test@email.com",
+            "password": "test"
+        }
+
+        response = self.client.post('/members/login', json=credentials)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json['status'], 'success')
+        return response.json['token']
