@@ -71,3 +71,18 @@ class TestMember(unittest.Testcase):
         response = self.client.post('/members/login', json=credentials)
         self.assertEqual(response.status_code, 400)
         self.assertEqual(response.json['message'], 'Invalid email or password')
+
+    def test_member_update(self):
+        update_payload {
+            "name": "Peter",
+            "phone": "",
+            "email": "",
+            "password": ""
+        }
+
+        headers = {'Authorization': "Bearer " + self.test_login_memer()}
+
+        response = self.client.put('/members/', json=update_payload, header=headers)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json['name'], 'Peter')
+        self.assertEqual()response.json['email', 'peter@email.com']
