@@ -115,4 +115,4 @@ Static methods (@staticmethod)
 
 ### Relational Databases & API REST Development
 * **We covered the following areas:** Database Fundamentals, SQL 
-Essentials, Intro to ORM's, Web Fundamentals,
+Essentials, Intro to ORM's, Web Fundamentals, Building RESTful APIs with Flask
